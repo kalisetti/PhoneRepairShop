@@ -4,62 +4,27 @@ using PX.Data.BQL.Fluent;
 
 namespace PhoneRepairShop
 {
-  public class RSSVRepairServiceMaint : PXGraph<RSSVRepairServiceMaint>
-  {
-
-    protected void RSSVRepairService_WalkInService_FieldUpdated(PXCache cache, PXFieldUpdatedEventArgs e)
-    {
-      
-      var row = (RSSVRepairService)e.Row;
-      if (row.WalkInService == true)
-      {
-        row.PreliminaryCheck = false;
-      }
-      else
-      {
-        row.PreliminaryCheck = true;
-      }
-    }
-
-    
-    /*
-    protected void RSSVRepairService_WalkInService_FieldUpdating(PXCache cache, PXFieldUpdatingEventArgs e)
-    {
-      
-      var row = (RSSVRepairService)e.Row;
-      if (row.WalkInService == true)
-      {
-        row.PreliminaryCheck = false;
-      }
-      else
-      {
-        row.PreliminaryCheck = true;
-      }
-    }
-    */
-    
-    public SelectFrom<RSSVRepairService>.View RepairService;
-    
-    public PXSave<RSSVRepairService> Save;
-    public PXCancel<RSSVRepairService> Cancel;
-
-
-    /*
-    public PXFilter<MasterTable> MasterView;
-    public PXFilter<DetailsTable> DetailsView;
-
-    [Serializable]
-    public class MasterTable : IBqlTable
+    public class RSSVRepairServiceMaint : PXGraph<RSSVRepairServiceMaint>
     {
 
+        protected void RSSVRepairService_WalkInService_FieldUpdated(PXCache cache, PXFieldUpdatedEventArgs e)
+        {
+
+            var row = (RSSVRepairService)e.Row;
+            if (row.WalkInService == true)
+            {
+                row.PreliminaryCheck = false;
+            }
+            else
+            {
+                row.PreliminaryCheck = true;
+            }
+        }
+
+        public SelectFrom<RSSVRepairService>.View RepairService;
+
+        public PXSave<RSSVRepairService> Save;
+        public PXCancel<RSSVRepairService> Cancel;
+
     }
-
-    [Serializable]
-    public class DetailsTable : IBqlTable
-    {
-
-    }
-    */
-
-  }
 }
