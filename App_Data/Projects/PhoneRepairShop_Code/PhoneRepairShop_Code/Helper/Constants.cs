@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PX.Data;
-using PX.Data.BQL.Fluent;
 
 namespace PhoneRepairShop
 {
-    public class RSSVDeviceMaint : PXGraph<RSSVDeviceMaint, RSSVDevice>
+    public static class RepairComplexity
     {
-        public SelectFrom<RSSVDevice>.View ServDevices;
+        public const string Low = "L";
+        public const string Medium = "M";
+        public const string High = "H";
     }
 }
