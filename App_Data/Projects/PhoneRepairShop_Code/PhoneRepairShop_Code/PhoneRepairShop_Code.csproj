@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RSSVDeviceMaint.cs" />
     <Compile Include="RSSVRepairServiceMaint.cs" />
     <Compile Include="DAC\RSSVRepairService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
