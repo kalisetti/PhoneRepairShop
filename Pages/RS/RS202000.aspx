@@ -15,6 +15,16 @@
         DataMember="ServDevices" Width="100%" AllowAutoHide="false">
         <Template>
             <px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True" />
+            <px:PXSelector ID="DeviceCD" runat="server" DataField="DeviceCD">
+            </px:PXSelector>
+            <px:PXTextEdit ID="Description" runat="server"
+                DataField="Description" DefaultLocale="">
+            </px:PXTextEdit>
+            <px:PXCheckBox ID="Active" runat="server" DataField="Active">
+            </px:PXCheckBox>
+            <px:PXDropDown ID="AvgComplexityOfRepair" runat="server"
+                DataField="AvgComplexityOfRepair">
+            </px:PXDropDown>
         </Template>
         <AutoSize Container="Window" Enabled="True" MinHeight="200" />
     </px:PXFormView>
