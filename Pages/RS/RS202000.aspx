@@ -14,12 +14,20 @@
     <px:PXFormView ID="form" runat="server" DataSourceID="ds"
         DataMember="ServDevices" Width="100%" AllowAutoHide="false">
         <Template>
-            <px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True" />
+            <px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True" 
+                ControlSize="M" 
+                LabelsWidth="S">
+            </px:PXLayoutRule>
             <px:PXSelector ID="DeviceCD" runat="server" DataField="DeviceCD">
             </px:PXSelector>
             <px:PXTextEdit ID="Description" runat="server"
                 DataField="Description" DefaultLocale="">
             </px:PXTextEdit>
+
+            <px:PXLayoutRule ID="PXLayoutRule2" runat="server" StartColumn="True"
+                ControlSize="M"
+                LabelsWidth="S">
+            </px:PXLayoutRule>
             <px:PXCheckBox ID="Active" runat="server" DataField="Active">
             </px:PXCheckBox>
             <px:PXDropDown ID="AvgComplexityOfRepair" runat="server"
