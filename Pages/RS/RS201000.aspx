@@ -21,7 +21,7 @@
 				<px:PXGridColumn Type="CheckBox" DataField="Active" Width="60" ></px:PXGridColumn>
 				<px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="WalkInService" Width="60" ></px:PXGridColumn>
 				<px:PXGridColumn Type="CheckBox" DataField="Prepayment" Width="60" ></px:PXGridColumn>
-				<px:PXGridColumn Type="CheckBox" DataField="PreliminaryCheck" Width="60" ></px:PXGridColumn></Columns>
+				<px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="PreliminaryCheck" Width="60" ></px:PXGridColumn></Columns>
 			</px:PXGridLevel>
 		</Levels>
 		<AutoSize Container="Window" Enabled="True" MinHeight="150" />
