@@ -18,15 +18,40 @@ using System;
 
 namespace PX.Objects.IN
 {
-  public class InventoryItemExt : PXCacheExtension<PX.Objects.IN.InventoryItem>
-  {
-    #region UsrRepairItem
-    [PXDBBool]
-    [PXUIField(DisplayName="Repair Item")]
-    [PXDefault(false, PersistingCheck = PXPersistingCheck.Nothing)]
+    public sealed class InventoryItemExt : PXCacheExtension<PX.Objects.IN.InventoryItem>
+    {
+        #region UsrRepairItem
+        [PXDBBool]
+        [PXUIField(DisplayName = "Repair Item")]
+        [PXDefault(false, PersistingCheck = PXPersistingCheck.Nothing)]
 
-    public virtual bool? UsrRepairItem { get; set; }
-    public abstract class usrRepairItem : PX.Data.BQL.BqlBool.Field<usrRepairItem> { }
-    #endregion
-  }
+        public bool? UsrRepairItem { get; set; }
+        public abstract class usrRepairItem : PX.Data.BQL.BqlBool.Field<usrRepairItem> { }
+        #endregion
+
+        #region UsrRepairItemType
+        [PXDBString(2, IsFixed = true)]
+        [PXStringList(
+            new string[]
+            {
+                PhoneRepairShop.RepairItemTypeConstants.Battery,
+                PhoneRepairShop.RepairItemTypeConstants.Screen,
+                PhoneRepairShop.RepairItemTypeConstants.ScreenCover,
+                PhoneRepairShop.RepairItemTypeConstants.BackCover,
+                PhoneRepairShop.RepairItemTypeConstants.Motherboard,
+            },
+            new string[]
+            {
+                PhoneRepairShop.Messages.Battery,
+                PhoneRepairShop.Messages.Screen,
+                PhoneRepairShop.Messages.ScreenCover,
+                PhoneRepairShop.Messages.BackCover,
+                PhoneRepairShop.Messages.Motherboard,
+            }
+        )]
+        [PXUIField(DisplayName = "Repair Item Type")]
+        public string UsrRepairItemType { get; set; }
+        public abstract class usrRepairItemType : PX.Data.BQL.BqlString.Field<usrRepairItemType> { }
+        #endregion
+    }
 }

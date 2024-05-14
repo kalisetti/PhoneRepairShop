@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\inventoryitemextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\inventoryitemextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\helper\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\helper\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\helper\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\helper\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\cstpublished\\pages_rs\\rs201000.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -27,6 +39,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InventoryItemExtensions.cs",
+              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\InventoryItemExtensions.cs",
+              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\DAC\\InventoryItemExtensions.cs",
+              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\InventoryItemExtensions.cs",
+              "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\InventoryItemExtensions.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAQwBsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T07:26:28.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Messages.cs",
+              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\Helper\\Messages.cs",
+              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Messages.cs",
+              "RelativeToolTip": "PhoneRepairShop_Code\\Helper\\Messages.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABQAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T07:23:47.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Constants.cs",
+              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\Helper\\Constants.cs",
+              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Constants.cs",
+              "RelativeToolTip": "PhoneRepairShop_Code\\Helper\\Constants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T07:20:57.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RS201000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\CstPublished\\Pages_RS\\RS201000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\CstPublished\\Pages_RS\\RS201000.aspx",
@@ -39,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RS201000.aspx.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS201000.aspx.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS201000.aspx.cs",
@@ -51,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RS201000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS201000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS201000.aspx",
@@ -63,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RS202000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS202000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS202000.aspx",
