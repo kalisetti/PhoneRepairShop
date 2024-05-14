@@ -67,73 +67,73 @@
         <Items>
             <px:PXTabItem Text="General Settings">
                 <Template>
-                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-					<px:PXSelector ID="edTemplateItemID" runat="server" DataField="TemplateItemID" AllowEdit="True" Enabled="false" />
-                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Item Defaults" />
-                    <px:PXSegmentMask CommitChanges="True" ID="edItemClassID" runat="server" DataField="ItemClassID" AllowEdit="True" />
-                    <px:PXDropDown ID="edItemType" runat="server" DataField="ItemType" />
-                    <px:PXCheckBox SuppressLabel="True" ID="chkKitItem" runat="server" DataField="KitItem" />
-                    <px:PXDropDown CommitChanges="True" ID="edValMethod" runat="server" DataField="ValMethod" />
-                    <px:PXSelector ID="edTaxCategoryID" runat="server" DataField="TaxCategoryID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" />
-                    <px:PXSelector CommitChanges="True" ID="edPostClassID" runat="server" DataField="PostClassID" AllowEdit="True" />
-                    <px:PXSelector CommitChanges="True" ID="edLotSerClassID" runat="server" DataField="LotSerClassID" AllowEdit="True" />
-                    <px:PXMaskEdit ID="edLotSerNumVal" runat="server" DataField="LotSerNumVal" CommitChanges="True"/>
-                    <px:PXSelector runat="server" ID="edCountryOfOrigin" DataField="CountryOfOrigin" />
-                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Warehouse Defaults" />
-                    <px:PXSegmentMask CommitChanges="True" ID="edDfltSiteID" runat="server" DataField="DfltSiteID" AllowEdit="True" />
-                    <px:PXSegmentMask CommitChanges="True" ID="edDfltShipLocationID" runat="server" DataField="DfltShipLocationID" AutoRefresh="True" AllowEdit="True" />
-                    <px:PXSegmentMask CommitChanges="True" ID="edDfltReceiptLocationID" runat="server" DataField="DfltReceiptLocationID" AutoRefresh="True" AllowEdit="True" />
-                    <px:PXLayoutRule runat="server" Merge="True" />
-                    <px:PXSegmentMask Size="s" ID="edDefaultSubItemID" runat="server" DataField="DefaultSubItemID" AutoRefresh="True" />
-                    <px:PXCheckBox ID="chkDefaultSubItemOnEntry" runat="server" DataField="DefaultSubItemOnEntry" />
-                    <px:PXLayoutRule runat="server" />
-                    <px:PXLayoutRule ID="PXLayoutRule2" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-                    <px:PXLayoutRule runat="server" GroupCaption="Unit of Measure" StartGroup="True" />
-					<px:PXLayoutRule runat="server" Merge="true" />
-                    <px:PXSelector ID="edBaseUnit" Size="s" runat="server" AllowEdit="True" CommitChanges="True" DataField="BaseUnit" Style="margin-right:30px"/>
-					<px:PXCheckBox ID="chkDecimalBaseUnit" runat="server" DataField="DecimalBaseUnit" CommitChanges="True"/>
-					<px:PXLayoutRule runat="server" Merge="true" />
-                    <px:PXSelector ID="edSalesUnit" Size="s" runat="server" AllowEdit="True" AutoRefresh="True" CommitChanges="True" DataField="SalesUnit" Style="margin-right:30px"/>
-					<px:PXCheckBox ID="chkDecimalSalesUnit" runat="server" DataField="DecimalSalesUnit" CommitChanges="True" />
-					<px:PXLayoutRule runat="server" Merge="true" />
-                    <px:PXSelector ID="edPurchaseUnit" Size="s" runat="server" AllowEdit="True" AutoRefresh="True" CommitChanges="True" DataField="PurchaseUnit" Style="margin-right:30px"/>
-					<px:PXCheckBox ID="chkDecimalPurchaseUnit" runat="server" DataField="DecimalPurchaseUnit" CommitChanges="True" />
-					<px:PXLayoutRule runat="server"/>
-                    <px:PXCheckBox SuppressLabel="True" ID="chkWeightItem" runat="server" DataField="WeightItem" />
-                    <px:PXLayoutRule runat="server" LabelsWidth="SM" ControlSize="S" SuppressLabel="True" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+					<px:PXSelector ID="edTemplateItemID" runat="server" DataField="TemplateItemID" AllowEdit="True" Enabled="false" ></px:PXSelector>
+                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Item Defaults" ></px:PXLayoutRule>
+                    <px:PXSegmentMask CommitChanges="True" ID="edItemClassID" runat="server" DataField="ItemClassID" AllowEdit="True" ></px:PXSegmentMask>
+                    <px:PXDropDown ID="edItemType" runat="server" DataField="ItemType" ></px:PXDropDown>
+	<px:PXCheckBox runat="server" ID="CstPXCheckBox1" DataField="UsrRepairItem" />
+                    <px:PXCheckBox SuppressLabel="True" ID="chkKitItem" runat="server" DataField="KitItem" ></px:PXCheckBox>
+                    <px:PXDropDown CommitChanges="True" ID="edValMethod" runat="server" DataField="ValMethod" ></px:PXDropDown>
+                    <px:PXSelector ID="edTaxCategoryID" runat="server" DataField="TaxCategoryID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" ></px:PXSelector>
+                    <px:PXSelector CommitChanges="True" ID="edPostClassID" runat="server" DataField="PostClassID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXSelector CommitChanges="True" ID="edLotSerClassID" runat="server" DataField="LotSerClassID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXMaskEdit ID="edLotSerNumVal" runat="server" DataField="LotSerNumVal" CommitChanges="True"></px:PXMaskEdit>
+                    <px:PXSelector runat="server" ID="edCountryOfOrigin" DataField="CountryOfOrigin" ></px:PXSelector>
+                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Warehouse Defaults" ></px:PXLayoutRule>
+                    <px:PXSegmentMask CommitChanges="True" ID="edDfltSiteID" runat="server" DataField="DfltSiteID" AllowEdit="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask CommitChanges="True" ID="edDfltShipLocationID" runat="server" DataField="DfltShipLocationID" AutoRefresh="True" AllowEdit="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask CommitChanges="True" ID="edDfltReceiptLocationID" runat="server" DataField="DfltReceiptLocationID" AutoRefresh="True" AllowEdit="True" ></px:PXSegmentMask>
+                    <px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+                    <px:PXSegmentMask Size="s" ID="edDefaultSubItemID" runat="server" DataField="DefaultSubItemID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXCheckBox ID="chkDefaultSubItemOnEntry" runat="server" DataField="DefaultSubItemOnEntry" ></px:PXCheckBox>
+                    <px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+                    <px:PXLayoutRule ID="PXLayoutRule2" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+                    <px:PXLayoutRule runat="server" GroupCaption="Unit of Measure" StartGroup="True" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+                    <px:PXSelector ID="edBaseUnit" Size="s" runat="server" AllowEdit="True" CommitChanges="True" DataField="BaseUnit" Style="margin-right:30px"></px:PXSelector>
+					<px:PXCheckBox ID="chkDecimalBaseUnit" runat="server" DataField="DecimalBaseUnit" CommitChanges="True"></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+                    <px:PXSelector ID="edSalesUnit" Size="s" runat="server" AllowEdit="True" AutoRefresh="True" CommitChanges="True" DataField="SalesUnit" Style="margin-right:30px"></px:PXSelector>
+					<px:PXCheckBox ID="chkDecimalSalesUnit" runat="server" DataField="DecimalSalesUnit" CommitChanges="True" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+                    <px:PXSelector ID="edPurchaseUnit" Size="s" runat="server" AllowEdit="True" AutoRefresh="True" CommitChanges="True" DataField="PurchaseUnit" Style="margin-right:30px"></px:PXSelector>
+					<px:PXCheckBox ID="chkDecimalPurchaseUnit" runat="server" DataField="DecimalPurchaseUnit" CommitChanges="True" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server"></px:PXLayoutRule>
+                    <px:PXCheckBox SuppressLabel="True" ID="chkWeightItem" runat="server" DataField="WeightItem" ></px:PXCheckBox>
+                    <px:PXLayoutRule runat="server" LabelsWidth="SM" ControlSize="S" SuppressLabel="True" ></px:PXLayoutRule>
                     <px:PXGrid ID="gridUnits" runat="server" DataSourceID="ds" SkinID="ShortList" Width="400px" Height="114px" Caption="Conversions" CaptionVisible="false">
-                        <Mode InitNewRow="True" />
+                        <Mode InitNewRow="True" ></Mode>
                         <Levels>
                             <px:PXGridLevel DataMember="itemunits">
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                                    <px:PXNumberEdit ID="edItemClassID2" runat="server" DataField="ItemClassID" />
-                                    <px:PXNumberEdit ID="edInventoryID" runat="server" DataField="InventoryID" />
-                                    <px:PXMaskEdit ID="edFromUnit" runat="server" DataField="FromUnit" />
-                                    <px:PXMaskEdit ID="edSampleToUnit" runat="server" DataField="SampleToUnit" />
-                                    <px:PXNumberEdit ID="edUnitRate" runat="server" DataField="UnitRate" />
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXNumberEdit ID="edItemClassID2" runat="server" DataField="ItemClassID" ></px:PXNumberEdit>
+                                    <px:PXNumberEdit ID="edInventoryID" runat="server" DataField="InventoryID" ></px:PXNumberEdit>
+                                    <px:PXMaskEdit ID="edFromUnit" runat="server" DataField="FromUnit" ></px:PXMaskEdit>
+                                    <px:PXMaskEdit ID="edSampleToUnit" runat="server" DataField="SampleToUnit" ></px:PXMaskEdit>
+                                    <px:PXNumberEdit ID="edUnitRate" runat="server" DataField="UnitRate" ></px:PXNumberEdit>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="UnitType" Type="DropDownList" Width="99px" Visible="False" />
-                                    <px:PXGridColumn DataField="ItemClassID" Width="36px" Visible="False" />
-                                    <px:PXGridColumn DataField="InventoryID" Visible="False" TextAlign="Right" Width="54px" />
-                                    <px:PXGridColumn DataField="FromUnit" Width="72px" CommitChanges="True" />
-                                    <px:PXGridColumn DataField="UnitMultDiv" Type="DropDownList" Width="90px" CommitChanges="True" />
-                                    <px:PXGridColumn DataField="UnitRate" TextAlign="Right" Width="108px" CommitChanges="True" />
-                                    <px:PXGridColumn DataField="SampleToUnit" Width="72px" />
-                                    <px:PXGridColumn DataField="PriceAdjustmentMultiplier" TextAlign="Right" Width="108px" CommitChanges="True" />
+                                    <px:PXGridColumn DataField="UnitType" Type="DropDownList" Width="99px" Visible="False" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ItemClassID" Width="36px" Visible="False" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="InventoryID" Visible="False" TextAlign="Right" Width="54px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="FromUnit" Width="72px" CommitChanges="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="UnitMultDiv" Type="DropDownList" Width="90px" CommitChanges="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="UnitRate" TextAlign="Right" Width="108px" CommitChanges="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SampleToUnit" Width="72px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="PriceAdjustmentMultiplier" TextAlign="Right" Width="108px" CommitChanges="True" ></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
-                        <Layout ColumnsMenu="False" />
+                        <Layout ColumnsMenu="False" ></Layout>
                     </px:PXGrid>
-                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Physical Inventory" />
-                    <px:PXSelector CommitChanges="True" ID="edPICycleID" runat="server" DataField="CycleID" AllowEdit="True" />
-                    <px:PXSelector CommitChanges="True" ID="edABCCodeID" runat="server" DataField="ABCCodeID" AllowEdit="True" />
-                    <px:PXCheckBox SuppressLabel="True" ID="chkABCCodeIsFixed" runat="server" DataField="ABCCodeIsFixed" />
-                    <px:PXSelector CommitChanges="True" ID="edMovementClassID" runat="server" DataField="MovementClassID" AllowEdit="True" />
-                    <px:PXCheckBox SuppressLabel="True" ID="chkMovementClassIsFixed" runat="server" DataField="MovementClassIsFixed" />
-                </Template>
+                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Physical Inventory" ></px:PXLayoutRule>
+                    <px:PXSelector CommitChanges="True" ID="edPICycleID" runat="server" DataField="CycleID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXSelector CommitChanges="True" ID="edABCCodeID" runat="server" DataField="ABCCodeID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXCheckBox SuppressLabel="True" ID="chkABCCodeIsFixed" runat="server" DataField="ABCCodeIsFixed" ></px:PXCheckBox>
+                    <px:PXSelector CommitChanges="True" ID="edMovementClassID" runat="server" DataField="MovementClassID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXCheckBox SuppressLabel="True" ID="chkMovementClassIsFixed" runat="server" DataField="MovementClassIsFixed" ></px:PXCheckBox></Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Subitems" Key="Subitems" RepaintOnDemand="false">
                 <Template>
