@@ -73,6 +73,7 @@
                     <px:PXSegmentMask CommitChanges="True" ID="edItemClassID" runat="server" DataField="ItemClassID" AllowEdit="True" ></px:PXSegmentMask>
                     <px:PXDropDown ID="edItemType" runat="server" DataField="ItemType" ></px:PXDropDown>
 	<px:PXCheckBox runat="server" ID="CstPXCheckBox1" DataField="UsrRepairItem" />
+	<px:PXDropDown runat="server" ID="CstPXDropDown2" DataField="UsrRepairItemType" />
                     <px:PXCheckBox SuppressLabel="True" ID="chkKitItem" runat="server" DataField="KitItem" ></px:PXCheckBox>
                     <px:PXDropDown CommitChanges="True" ID="edValMethod" runat="server" DataField="ValMethod" ></px:PXDropDown>
                     <px:PXSelector ID="edTaxCategoryID" runat="server" DataField="TaxCategoryID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" ></px:PXSelector>
