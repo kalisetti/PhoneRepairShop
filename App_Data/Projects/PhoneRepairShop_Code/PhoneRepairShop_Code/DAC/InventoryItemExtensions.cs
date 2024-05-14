@@ -49,7 +49,7 @@ namespace PX.Objects.IN
                 PhoneRepairShop.Messages.Motherboard,
             }
         )]
-        [PXUIField(DisplayName = "Repair Item Type")]
+        [PXUIField(DisplayName = "Repair Item Type", Enabled = false)]
         public string UsrRepairItemType { get; set; }
         public abstract class usrRepairItemType : PX.Data.BQL.BqlString.Field<usrRepairItemType> { }
         #endregion

@@ -72,7 +72,7 @@
                     <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Item Defaults" ></px:PXLayoutRule>
                     <px:PXSegmentMask CommitChanges="True" ID="edItemClassID" runat="server" DataField="ItemClassID" AllowEdit="True" ></px:PXSegmentMask>
                     <px:PXDropDown ID="edItemType" runat="server" DataField="ItemType" ></px:PXDropDown>
-	<px:PXCheckBox runat="server" ID="CstPXCheckBox1" DataField="UsrRepairItem" />
+	<px:PXCheckBox runat="server" ID="CstPXCheckBox1" DataField="UsrRepairItem" CommitChanges="True" />
 	<px:PXDropDown runat="server" ID="CstPXDropDown2" DataField="UsrRepairItemType" />
                     <px:PXCheckBox SuppressLabel="True" ID="chkKitItem" runat="server" DataField="KitItem" ></px:PXCheckBox>
                     <px:PXDropDown CommitChanges="True" ID="edValMethod" runat="server" DataField="ValMethod" ></px:PXDropDown>
