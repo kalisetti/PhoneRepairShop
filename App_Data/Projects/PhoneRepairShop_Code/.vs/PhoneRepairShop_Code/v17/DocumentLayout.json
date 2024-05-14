@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\cstpublished\\pages_rs\\rs201000.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\pages\\rs\\rs202000.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -19,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "RS201000.aspx",
+              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\CstPublished\\Pages_RS\\RS201000.aspx",
+              "RelativeDocumentMoniker": "..\\..\\..\\CstPublished\\Pages_RS\\RS201000.aspx",
+              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\CstPublished\\Pages_RS\\RS201000.aspx",
+              "RelativeToolTip": "..\\..\\..\\CstPublished\\Pages_RS\\RS201000.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-14T06:46:34.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RS201000.aspx.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS201000.aspx.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS201000.aspx.cs",
@@ -35,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RS201000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS201000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS201000.aspx",
@@ -47,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RS202000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS202000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS202000.aspx",
