@@ -50,6 +50,7 @@ namespace PhoneRepairShop
 
         #region RepairItemLineCntr
         [PXDBInt()]
+        [PXDefault(0)]
         [PXUIField(DisplayName = "Repair Item Line Cntr")]
         public virtual int? RepairItemLineCntr { get; set; }
         public abstract class repairItemLineCntr : PX.Data.BQL.BqlInt.Field<repairItemLineCntr> { }

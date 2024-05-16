@@ -5,29 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using PX.Data;
 using PX.Data.BQL.Fluent;
+using PX.Objects.IN;
 
 namespace PhoneRepairShop
 {
     public class RSSVRepairPriceMaint : PXGraph<RSSVRepairPriceMaint, RSSVRepairPrice>
     {
         public SelectFrom<RSSVRepairPrice>.View RepairPrices;
-
-        //public PXSave<RSSVRepairPrice> Save;
-        //public PXCancel<RSSVRepairPrice> Cancel;
-
-        //public PXFilter<MasterTable> MasterView;
-        //public PXFilter<DetailsTable> DetailsView;
-
-        //[Serializable]
-        //public class MasterTable : IBqlTable
-        //{
-
-        //}
-
-        //[Serializable]
-        //public class DetailsTable : IBqlTable
-        //{
-
-        //}
+        public SelectFrom<RSSVRepairItem>.
+            LeftJoin<InventoryItem>.
+                On<InventoryItem.inventoryID.IsEqual<RSSVRepairItem.inventoryID.FromCurrent>>.
+            Where<RSSVRepairItem.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
+                And<RSSVRepairItem.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.View RepairItems;
+        
     }
 }

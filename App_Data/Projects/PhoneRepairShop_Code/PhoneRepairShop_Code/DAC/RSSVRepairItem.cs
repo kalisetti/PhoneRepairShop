@@ -1,5 +1,6 @@
 using System;
 using PX.Data;
+using PX.Data.BQL.Fluent;
 using PX.Objects.IN;
 
 namespace PhoneRepairShop
@@ -10,21 +11,29 @@ namespace PhoneRepairShop
     {
         #region ServiceID
         [PXDBInt(IsKey = true)]
-        [PXUIField(DisplayName = "Service ID")]
+        [PXDBDefault(typeof(RSSVRepairPrice.serviceID))]
+        [PXParent(
+            typeof(SelectFrom<RSSVRepairPrice>.
+                Where<RSSVRepairPrice.deviceID.IsEqual<RSSVRepairItem.deviceID.FromCurrent>.
+                And<RSSVRepairPrice.serviceID.IsEqual<RSSVRepairItem.serviceID.FromCurrent>>>
+            ))]
+        //[PXUIField(DisplayName = "Service ID")]
         public virtual int? ServiceID { get; set; }
         public abstract class serviceID : PX.Data.BQL.BqlInt.Field<serviceID> { }
         #endregion
 
         #region DeviceID
         [PXDBInt(IsKey = true)]
-        [PXUIField(DisplayName = "Device ID")]
+        [PXDBDefault(typeof(RSSVRepairPrice.deviceID))]
+        //[PXUIField(DisplayName = "Device ID")]
         public virtual int? DeviceID { get; set; }
         public abstract class deviceID : PX.Data.BQL.BqlInt.Field<deviceID> { }
         #endregion
 
         #region LineNbr
         [PXDBInt(IsKey = true)]
-        [PXUIField(DisplayName = "Line Nbr")]
+        [PXLineNbr(typeof(RSSVRepairPrice.repairItemLineCntr))]
+        [PXUIField(DisplayName = "Line Nbr.", Visible = false)]
         public virtual int? LineNbr { get; set; }
         public abstract class lineNbr : PX.Data.BQL.BqlInt.Field<lineNbr> { }
         #endregion
