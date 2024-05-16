@@ -57,9 +57,17 @@ namespace PhoneRepairShop
             {
                 if (repairItem.LineNbr != row.LineNbr)
                 {
+                    // Set IsDefault to false for all other items.
                     if (row.IsDefault == true)
                     {
                         repairItem.IsDefault = false;
+                        RepairItems.Update(repairItem);
+                    }
+
+                    // Make the Required field identical for all items.
+                    if (row.Required != e.OldRow.Required && row.Required != repairItem.Required)
+                    {
+                        repairItem.Required = row.Required;
                         RepairItems.Update(repairItem);
                     }
                 }
@@ -67,6 +75,24 @@ namespace PhoneRepairShop
 
             // Refresh the UI.
             RepairItems.View.RequestRefresh();
+        }
+
+        // Update the Required check box when a repair item type is selected.
+        protected void _(Events.FieldUpdated<RSSVRepairItem, RSSVRepairItem.repairItemType> e)
+        {
+            RSSVRepairItem row = e.Row;
+
+            // Use LINQ to check whether there are any repair items with the same
+            // repair item type.
+            var repairItem = (RSSVRepairItem)RepairItems.Select().Where(item =>
+                    item.GetItem<RSSVRepairItem>().RepairItemType == row.RepairItemType).FirstOrDefault();
+
+            // Copy the Required value from the previous records.
+            if (repairItem != null)
+            {
+                row.Required = repairItem.Required;
+            }
+
         }
     }
 }
