@@ -65,6 +65,15 @@ namespace PhoneRepairShop
         #region InventoryID
         //[PXDBInt()]
         [PXUIField(DisplayName = "Inventory ID")]
+        [PXRestrictor(
+            typeof(
+            Where<InventoryItemExt.usrRepairItem.IsEqual<True>.
+                And<InventoryItemExt.usrRepairItemType.IsEqual<RSSVRepairItem.repairItemType.FromCurrent>>.
+                And<RSSVRepairItem.repairItemType.FromCurrent.IsNotNull>.
+            Or<InventoryItemExt.usrRepairItem.IsEqual<True>.
+                And<RSSVRepairItem.repairItemType.FromCurrent.IsNull>>>),
+            Messages.StockItemIncorrectRepairItemType,
+            typeof(RSSVRepairItem.repairItemType))]
         [Inventory]
         public virtual int? InventoryID { get; set; }
         public abstract class inventoryID : PX.Data.BQL.BqlInt.Field<inventoryID> { }

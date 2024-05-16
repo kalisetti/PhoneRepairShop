@@ -36,21 +36,19 @@
         <Items>
             <px:PXTabItem Text="Repair Items">
                 <Template>
-                    <px:PXGrid ID="grid" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false" AutoSize="true">
+                    <px:PXGrid ID="grid" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false" AutoSize="true" SyncPosition="True">
                         <Levels>
                             <px:PXGridLevel DataMember="RepairItems">
+                                <RowTemplate>
+                                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="InventoryID" AutoRefresh="true" />
+                                </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="RepairItemType" Width="70"/>
+                                    <px:PXGridColumn DataField="RepairItemType" CommitChanges="True" Width="70"/>
                                     <px:PXGridColumn Type="CheckBox" DataField="Required" Width="80"/>
                                     <px:PXGridColumn DataField="InventoryID" Width="70"/>
                                     <px:PXGridColumn DataField="InventoryID_description" Width="280"/>
                                     <px:PXGridColumn DataField="BasePrice" Width="100"/>
                                     <px:PXGridColumn Type="CheckBox" DataField="IsDefault" Width="80"/>
-
-                                   <%-- <px:PXGridColumn Type="CheckBox" DataField="Active" Width="60"></px:PXGridColumn>
-                                    <px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="WalkInService" Width="60"></px:PXGridColumn>
-                                    <px:PXGridColumn Type="CheckBox" DataField="Prepayment" Width="60"></px:PXGridColumn>
-                                    <px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="PreliminaryCheck" Width="60"></px:PXGridColumn>--%>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>

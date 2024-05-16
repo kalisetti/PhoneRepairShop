@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PX.Common;
 
 namespace PhoneRepairShop
 {
+    [PXLocalizable()]
     public static class Messages
     {
+        // Error message
+        public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
+
         // Complexity of repair
         public const string High = "High";
         public const string Medium = "Medium";
