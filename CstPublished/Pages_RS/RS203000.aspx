@@ -36,6 +36,28 @@
         <Items>
             <px:PXTabItem Text="Repair Items">
                 <Template>
+                    <px:PXGrid ID="grid" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false" AutoSize="true">
+                        <Levels>
+                            <px:PXGridLevel DataMember="RepairItems">
+                                <Columns>
+                                    <px:PXGridColumn DataField="RepairItemType" Width="70"/>
+                                    <px:PXGridColumn Type="CheckBox" DataField="Required" Width="80"/>
+                                    <px:PXGridColumn DataField="InventoryID" Width="70"/>
+                                    <px:PXGridColumn DataField="InventoryID_description" Width="280"/>
+                                    <px:PXGridColumn DataField="BasePrice" Width="100"/>
+                                    <px:PXGridColumn Type="CheckBox" DataField="IsDefault" Width="80"/>
+
+                                   <%-- <px:PXGridColumn Type="CheckBox" DataField="Active" Width="60"></px:PXGridColumn>
+                                    <px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="WalkInService" Width="60"></px:PXGridColumn>
+                                    <px:PXGridColumn Type="CheckBox" DataField="Prepayment" Width="60"></px:PXGridColumn>
+                                    <px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="PreliminaryCheck" Width="60"></px:PXGridColumn>--%>
+                                </Columns>
+                            </px:PXGridLevel>
+                        </Levels>
+                        <AutoSize Container="Window" Enabled="True" MinHeight="150" />
+                        <ActionBar>
+                        </ActionBar>
+                    </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Labor">
