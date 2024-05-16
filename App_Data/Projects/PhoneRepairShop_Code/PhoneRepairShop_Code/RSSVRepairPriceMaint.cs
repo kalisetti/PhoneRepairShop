@@ -41,5 +41,32 @@ namespace PhoneRepairShop
                 }
             }
         }
+
+        // Update the IsDefault field of other records with the same repair item type
+        // when the IsDefault field is updated.
+        protected void _(Events.RowUpdated<RSSVRepairItem> e)
+        {
+            RSSVRepairItem row = e.Row;
+
+            // Use LINQ to select the repair items with the same repair item type
+            // as in the updated row.
+            var repairItems = RepairItems.Select().Where(item =>
+                    item.GetItem<RSSVRepairItem>().RepairItemType == row.RepairItemType);
+
+            foreach (RSSVRepairItem repairItem in repairItems)
+            {
+                if (repairItem.LineNbr != row.LineNbr)
+                {
+                    if (row.IsDefault == true)
+                    {
+                        repairItem.IsDefault = false;
+                        RepairItems.Update(repairItem);
+                    }
+                }
+            }
+
+            // Refresh the UI.
+            RepairItems.View.RequestRefresh();
+        }
     }
 }
