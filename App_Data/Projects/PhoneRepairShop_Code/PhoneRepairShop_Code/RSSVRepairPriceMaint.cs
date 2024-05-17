@@ -12,6 +12,18 @@ namespace PhoneRepairShop
 {
     public class RSSVRepairPriceMaint : PXGraph<RSSVRepairPriceMaint, RSSVRepairPrice>
     {
+        // The FBQL constant for the free warranty that is inserted by default
+        public const string DefaultWarrantyConstant = "DFLTWARRNT";
+        public class defaultWarranty : PX.Data.BQL.BqlString.Constant<defaultWarranty>
+        {
+            public defaultWarranty() : base(DefaultWarrantyConstant)
+            {
+
+            }
+        }
+
+        // Views
+        // Repair Prices
         public SelectFrom<RSSVRepairPrice>.View RepairPrices;
         
         // Repair Items 
@@ -35,6 +47,10 @@ namespace PhoneRepairShop
             Where<RSSVWarranty.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
                 And<RSSVWarranty.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.
             OrderBy<RSSVWarranty.defaultWarranty.Desc>.View Warranty;
+
+        // The view for the default warranty
+        public SelectFrom<Contract>.
+            Where<Contract.contractCD.IsEqual<defaultWarranty>>.View DefaultWarranty;
 
         // Update price and repair item type when inventory ID of repair item
         // is updated.
@@ -111,6 +127,47 @@ namespace PhoneRepairShop
                 row.Required = repairItem.Required;
             }
 
+        }
+
+        // Insert the default detail record.
+        protected virtual void _(Events.RowInserted<RSSVRepairPrice> e)
+        {
+            if (Warranty.Select().Count == 0)
+            {
+                bool oldDirty = Warranty.Cache.IsDirty;
+
+                // Retrieve the default warranty.
+                Contract defaultWarranty = (Contract)DefaultWarranty.Select();
+                if (defaultWarranty != null)
+                {
+                    RSSVWarranty line = new RSSVWarranty();
+                    line.ContractID = defaultWarranty.ContractID;
+                    // Insert the data record into
+                    // the cache of the Warranty data view.
+                    Warranty.Insert(line);
+                    // Clear the flag that indicates in the UI whether the cache
+                    // contains changes.
+                    Warranty.Cache.IsDirty = oldDirty;
+
+                }
+            }
+        }
+
+        // Set the DefaultWarranty field to true for the inserted default warranty
+        protected virtual void _(Events.FieldDefaulting<RSSVWarranty.defaultWarranty> e)
+        {
+            RSSVWarranty line = (RSSVWarranty)e.Row;
+            if (line == null) return;
+            Contract defaultWarranty = (Contract)DefaultWarranty.Select();
+            if (defaultWarranty != null && line.ContractID == defaultWarranty.ContractID)
+            {
+                // Setting the default value
+                e.NewValue = true;
+
+                // Setting a flag to prevent the execution of the FieldDefaulting
+                // event handlers that are defined in attribute
+                e.Cancel = true;
+            }
         }
     }
 }
