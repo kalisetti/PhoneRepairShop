@@ -25,10 +25,20 @@ using SiteStatus = PX.Objects.IN.Overrides.INDocumentRelease.SiteStatus;
 using PX.Objects;
 using PX.Objects.IN;
 
+using PhoneRepairShop;
+using PX.Data.BQL;
+using PX.Data.BQL.Fluent;
+
 namespace PX.Objects.IN
 {
     public class InventoryItemMaint_Extension : PXGraphExtension<InventoryItemMaint>
     {
+        public SelectFrom<RSSVStockItemDevice>.
+            LeftJoin<RSSVDevice>.
+            On<RSSVStockItemDevice.deviceID.IsEqual<RSSVDevice.deviceID>>.
+            Where<RSSVStockItemDevice.inventoryID.IsEqual<
+                InventoryItem.inventoryID.FromCurrent>>.View CompatibleDevices;
+
         #region Event Handlers
 
         protected void _(Events.RowSelected<InventoryItem> e)

@@ -1,68 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using PX.Data;
+using PX.Data.BQL.Fluent;
+using PX.Objects.IN;
 
 namespace PhoneRepairShop
 {
-    [PXCacheName("Serviced Device")]
-    [PXPrimaryGraph(typeof(RSSVDeviceMaint))]
-    public class RSSVDevice : IBqlTable
+    [Serializable]
+    [PXCacheName("Device Compatible with Stock Item")]
+    public class RSSVStockItemDevice : IBqlTable
     {
+        #region InventoryID
+        [PXDBInt(IsKey = true)]
+        //[PXUIField(DisplayName = "Inventory ID")]
+        [PXDBDefault(typeof(InventoryItem.inventoryID))]
+        [PXParent(
+            typeof(SelectFrom<InventoryItem>.
+                Where<InventoryItem.inventoryID.IsEqual<RSSVStockItemDevice.inventoryID.FromCurrent>>
+            ))]
+        public virtual int? InventoryID { get; set; }
+        public abstract class inventoryID : PX.Data.BQL.BqlInt.Field<inventoryID> { }
+        #endregion
+
         #region DeviceID
-        [PXDBIdentity]
+        [PXDBInt(IsKey = true)]
+        [PXUIField(DisplayName = "Device")]
+        [PXSelector(
+            typeof(RSSVDevice.deviceID),
+            typeof(RSSVDevice.deviceCD),
+            typeof(RSSVDevice.description),
+            SubstituteKey = typeof(RSSVDevice.deviceCD)
+            )]
         public virtual int? DeviceID { get; set; }
         public abstract class deviceID : PX.Data.BQL.BqlInt.Field<deviceID> { }
-        #endregion
-
-        #region DeviceCD
-        [PXDBString(15, IsUnicode = true, IsKey = true)]
-        [PXDefault]
-        [PXUIField(DisplayName = "Device Code")]
-        [PXSelector(typeof(Search<RSSVDevice.deviceCD>),
-                    typeof(RSSVDevice.deviceCD),
-                    typeof(RSSVDevice.active),
-                    typeof(RSSVDevice.avgComplexityOfRepair))]
-        public virtual string DeviceCD { get; set; }
-        public abstract class deviceCD : PX.Data.BQL.BqlString.Field<deviceCD> { }
-        #endregion
-
-        #region Description
-        [PXDBString(256, IsUnicode = true, InputMask = "")]
-        [PXUIField(DisplayName = "Description")]
-        public virtual string Description { get; set; }
-        public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
-        #endregion
-
-        #region Active
-        [PXDBBool()]
-        [PXDefault(true)]
-        [PXUIField(DisplayName = "Active" )]
-        public virtual bool? Active { get; set; }
-        public abstract class active : PX.Data.BQL.BqlBool.Field<active> { }
-        #endregion
-
-        #region AvgComplexityOfRepair
-        [PXDBString(1, IsFixed = true)]
-        [PXDefault(RepairComplexity.Medium)]
-        [PXUIField(DisplayName = "Complexity")]
-        [PXStringList(
-            new string[]
-            {
-                RepairComplexity.Low,
-                RepairComplexity.Medium,
-                RepairComplexity.High,
-            },
-            new string[]
-            {
-                Messages.Low,
-                Messages.Medium,
-                Messages.High,
-            })]
-        public virtual string AvgComplexityOfRepair { get; set; }
-        public abstract class avgComplexityOfRepair : PX.Data.BQL.BqlString.Field<avgComplexityOfRepair> { }
         #endregion
 
         #region CreatedDateTime
@@ -103,6 +72,7 @@ namespace PhoneRepairShop
 
         #region Tstamp
         [PXDBTimestamp()]
+        [PXUIField(DisplayName = "Tstamp")]
         public virtual byte[] Tstamp { get; set; }
         public abstract class tstamp : PX.Data.BQL.BqlByteArray.Field<tstamp> { }
         #endregion
