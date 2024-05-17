@@ -169,5 +169,13 @@ namespace PhoneRepairShop
                 e.Cancel = true;
             }
         }
+
+        // Make the default warranty unavailable for editing.
+        protected virtual void _(Events.RowSelected<RSSVWarranty> e)
+        {
+            RSSVWarranty line = e.Row;
+            if (line == null) return;
+            PXUIFieldAttribute.SetEnabled(e.Cache, line, line.DefaultWarranty != true);
+        }
     }
 }
