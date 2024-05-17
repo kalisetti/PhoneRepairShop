@@ -69,8 +69,8 @@
                                 <Columns>                                    
                                     <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" />
                                     <px:PXGridColumn DataField="InventoryID_description" Width="280" />
-                                    <px:PXGridColumn DataField="DefaultPrice" Width="100" />
-                                    <px:PXGridColumn DataField="Quantity" Width="100" />
+                                    <px:PXGridColumn DataField="DefaultPrice" CommitChanges="True" Width="100" />
+                                    <px:PXGridColumn DataField="Quantity" CommitChanges="True" Width="100" />
                                     <px:PXGridColumn DataField="ExtPrice" Width="100" />
                                     
                                 </Columns>
