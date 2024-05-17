@@ -51,6 +51,10 @@ namespace PX.Objects.IN
             // Make the Repair Item Type box available
             // when the Repair Item check box is selected.
             PXUIFieldAttribute.SetEnabled<InventoryItemExt.usrRepairItemType>(e.Cache, e.Row, enableFields);
+
+            // Display the Compatible Devices tab when the Repair Item check box
+            // is selected.
+            CompatibleDevices.Cache.AllowSelect = enableFields;
         }
 
 

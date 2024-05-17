@@ -791,7 +791,7 @@
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
-	<px:PXTabItem Text="Compatible Devices">
+	<px:PXTabItem Text="Compatible Devices" RepaintOnDemand="False">
 		<Template>
 			<px:PXGrid runat="server" ID="CstPXGrid3" SkinID="Details" Width="100%" DataSourceID="ds">
 				<Levels>
