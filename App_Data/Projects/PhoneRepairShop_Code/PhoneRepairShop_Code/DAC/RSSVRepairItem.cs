@@ -99,6 +99,7 @@ namespace PhoneRepairShop
         [PXDBDecimal()]
         [PXDefault(TypeCode.Decimal, "0.0")]
         [PXUIField(DisplayName = "Base Price")]
+        [PXFormula(null, typeof(SumCalc<RSSVRepairPrice.price>))]
         public virtual Decimal? BasePrice { get; set; }
         public abstract class basePrice : PX.Data.BQL.BqlDecimal.Field<basePrice> { }
         #endregion
