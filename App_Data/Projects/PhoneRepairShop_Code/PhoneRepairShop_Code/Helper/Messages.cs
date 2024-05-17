@@ -10,8 +10,10 @@ namespace PhoneRepairShop
     [PXLocalizable()]
     public static class Messages
     {
-        // Error message
+        // Error messages
         public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
+        public const string StockItemNotPermitted = "Only non-stock items are permitted Labor charges";
+
 
         // Complexity of repair
         public const string High = "High";

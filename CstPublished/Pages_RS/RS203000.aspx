@@ -43,12 +43,12 @@
                                     <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="InventoryID" AutoRefresh="true" />
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="RepairItemType" CommitChanges="True" Width="70"/>
-                                    <px:PXGridColumn Type="CheckBox" DataField="Required" CommitChanges="True" Width="80"/>
-                                    <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70"/>
-                                    <px:PXGridColumn DataField="InventoryID_description" Width="280"/>
-                                    <px:PXGridColumn DataField="BasePrice" Width="100"/>
-                                    <px:PXGridColumn Type="CheckBox" DataField="IsDefault" CommitChanges="true" Width="80"/>
+                                    <px:PXGridColumn DataField="RepairItemType" CommitChanges="True" Width="70" />
+                                    <px:PXGridColumn Type="CheckBox" DataField="Required" CommitChanges="True" Width="80" />
+                                    <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" />
+                                    <px:PXGridColumn DataField="InventoryID_description" Width="280" />
+                                    <px:PXGridColumn DataField="BasePrice" Width="100" />
+                                    <px:PXGridColumn Type="CheckBox" DataField="IsDefault" CommitChanges="true" Width="80" />
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
@@ -60,6 +60,26 @@
             </px:PXTabItem>
             <px:PXTabItem Text="Labor">
                 <Template>
+                    <px:PXGrid ID="gridLabor" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false" AutoSize="true" SyncPosition="True">
+                        <Levels>
+                            <px:PXGridLevel DataMember="Labor">
+                                <RowTemplate>
+                                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask9" DataField="InventoryID" AutoRefresh="true" />
+                                </RowTemplate>
+                                <Columns>                                    
+                                    <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" />
+                                    <px:PXGridColumn DataField="InventoryID_description" Width="280" />
+                                    <px:PXGridColumn DataField="DefaultPrice" Width="100" />
+                                    <px:PXGridColumn DataField="Quantity" Width="100" />
+                                    <px:PXGridColumn DataField="ExtPrice" Width="100" />
+                                    
+                                </Columns>
+                            </px:PXGridLevel>
+                        </Levels>
+                        <AutoSize Container="Window" Enabled="True" MinHeight="150" />
+                        <ActionBar>
+                        </ActionBar>
+                    </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Warranty">

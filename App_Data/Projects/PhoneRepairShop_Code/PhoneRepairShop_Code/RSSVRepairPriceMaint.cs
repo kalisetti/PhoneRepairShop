@@ -17,7 +17,13 @@ namespace PhoneRepairShop
                 On<InventoryItem.inventoryID.IsEqual<RSSVRepairItem.inventoryID.FromCurrent>>.
             Where<RSSVRepairItem.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
                 And<RSSVRepairItem.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.View RepairItems;
-        
+        public SelectFrom<RSSVLabor>.
+            LeftJoin<InventoryItem>.
+                On<InventoryItem.inventoryID.IsEqual<RSSVLabor.inventoryID.FromCurrent>>.
+            Where<RSSVLabor.deviceID.IsEqual<RSSVLabor.deviceID.FromCurrent>.
+                And<RSSVLabor.serviceID.IsEqual<RSSVLabor.serviceID.FromCurrent>>>.View Labor;
+
+
         // Update price and repair item type when inventory ID of repair item
         // is updated.
         protected void _(Events.FieldUpdated<RSSVRepairItem, RSSVRepairItem.inventoryID> e)
