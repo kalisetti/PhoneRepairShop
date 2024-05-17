@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PX.Data;
 using PX.Data.BQL.Fluent;
+using PX.Objects.CT;
 using PX.Objects.IN;
 
 namespace PhoneRepairShop
@@ -12,17 +13,28 @@ namespace PhoneRepairShop
     public class RSSVRepairPriceMaint : PXGraph<RSSVRepairPriceMaint, RSSVRepairPrice>
     {
         public SelectFrom<RSSVRepairPrice>.View RepairPrices;
+        
+        // Repair Items 
         public SelectFrom<RSSVRepairItem>.
             LeftJoin<InventoryItem>.
                 On<InventoryItem.inventoryID.IsEqual<RSSVRepairItem.inventoryID.FromCurrent>>.
             Where<RSSVRepairItem.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
                 And<RSSVRepairItem.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.View RepairItems;
+        
+        // Labor
         public SelectFrom<RSSVLabor>.
             LeftJoin<InventoryItem>.
                 On<InventoryItem.inventoryID.IsEqual<RSSVLabor.inventoryID.FromCurrent>>.
-            Where<RSSVLabor.deviceID.IsEqual<RSSVLabor.deviceID.FromCurrent>.
-                And<RSSVLabor.serviceID.IsEqual<RSSVLabor.serviceID.FromCurrent>>>.View Labor;
+            Where<RSSVLabor.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
+                And<RSSVLabor.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.View Labor;
 
+        // Warranty
+        public SelectFrom<RSSVWarranty>.
+            LeftJoin<ContractTemplate>.
+                On<ContractTemplate.contractID.IsEqual<RSSVWarranty.contractID.FromCurrent>>.
+            Where<RSSVWarranty.deviceID.IsEqual<RSSVRepairPrice.deviceID.FromCurrent>.
+                And<RSSVWarranty.serviceID.IsEqual<RSSVRepairPrice.serviceID.FromCurrent>>>.
+            OrderBy<RSSVWarranty.defaultWarranty.Desc>.View Warranty;
 
         // Update price and repair item type when inventory ID of repair item
         // is updated.

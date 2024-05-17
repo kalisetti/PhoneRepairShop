@@ -66,13 +66,13 @@
                                 <RowTemplate>
                                     <px:PXSegmentMask runat="server" ID="CstPXSegmentMask9" DataField="InventoryID" AutoRefresh="true" />
                                 </RowTemplate>
-                                <Columns>                                    
+                                <Columns>
                                     <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" />
                                     <px:PXGridColumn DataField="InventoryID_description" Width="280" />
                                     <px:PXGridColumn DataField="DefaultPrice" CommitChanges="True" Width="100" />
                                     <px:PXGridColumn DataField="Quantity" CommitChanges="True" Width="100" />
                                     <px:PXGridColumn DataField="ExtPrice" Width="100" />
-                                    
+
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
@@ -84,6 +84,22 @@
             </px:PXTabItem>
             <px:PXTabItem Text="Warranty">
                 <Template>
+                    <px:PXGrid ID="gridWarranty" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false" AutoSize="true" SyncPosition="True">
+                        <Levels>
+                            <px:PXGridLevel DataMember="Warranty">
+                                <Columns>
+                                    <px:PXGridColumn DataField="ContractID" CommitChanges="True" Width="70" />
+                                    <px:PXGridColumn DataField="ContractTemplate__Description" Width="280" />
+                                    <px:PXGridColumn DataField="ContractTemplate__Duration" Width="100" />
+                                    <px:PXGridColumn DataField="ContractTemplate__DurationType" Width="100" />
+                                    <px:PXGridColumn DataField="ContractTemplate__Type" Width="100" />
+                                </Columns>
+                            </px:PXGridLevel>
+                        </Levels>
+                        <AutoSize Container="Window" Enabled="True" MinHeight="150" />
+                        <ActionBar>
+                        </ActionBar>
+                    </px:PXGrid>
                 </Template>
             </px:PXTabItem>
         </Items>
