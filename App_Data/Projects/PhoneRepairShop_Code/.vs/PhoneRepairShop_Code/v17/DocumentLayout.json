@@ -14,11 +14,11 @@
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvrepairprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\rssvdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\rssvdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\rssvwarranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\rssvwarranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvwarranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,11 +26,11 @@
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvrepairitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\rssvlabor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\rssvlabor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvlabor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\inventoryitemextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\inventoryitemextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\inventoryitemextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +42,7 @@
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\inventoryitemmaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\rssvstockitemdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\rssvstockitemdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvstockitemdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -65,8 +65,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWarranty.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAA1wC0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T03:14:28.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T03:14:28.942Z"
             },
             {
               "$type": "Document",
@@ -78,8 +77,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\InventoryItemExtensions.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAswBYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T00:58:18.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T00:58:18.739Z"
             },
             {
               "$type": "Document",
@@ -91,8 +89,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVLabor.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAEcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T01:41:14.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T01:41:14.75Z"
             },
             {
               "$type": "Document",
@@ -104,8 +101,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVDevice.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T15:32:38.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T15:32:38.973Z"
             },
             {
               "$type": "Document",
@@ -117,8 +113,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\InventoryItemMaint.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAiwDgAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T08:40:15.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T08:40:15.672Z"
             },
             {
               "$type": "Document",
@@ -130,8 +125,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\Helper\\Messages.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T07:58:29.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T07:58:29.073Z"
             },
             {
               "$type": "Document",
@@ -143,8 +137,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVRepairItem.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAGUAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:33:50.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T05:33:50.078Z"
             },
             {
               "$type": "Document",
@@ -156,8 +149,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVStockItemDevice.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAA3wBcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T08:51:29.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T08:51:29.083Z"
             },
             {
               "$type": "Document",
@@ -169,8 +161,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\RSSVRepairPriceMaint.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:06:52.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T05:06:52.974Z"
             },
             {
               "$type": "Document",
@@ -182,8 +173,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVRepairPrice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T04:58:27.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T04:58:27.277Z"
             },
             {
               "$type": "Document",
