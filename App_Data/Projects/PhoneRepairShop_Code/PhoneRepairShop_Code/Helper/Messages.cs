@@ -7,24 +7,37 @@ using PX.Common;
 
 namespace PhoneRepairShop
 {
-    [PXLocalizable()]
-    public static class Messages
-    {
-        // Error messages
-        public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
-        public const string StockItemNotPermitted = "Only non-stock items are permitted Labor charges";
+	[PXLocalizable()]
+	public static class Messages
+	{
+		// Error messages
+		public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
+		public const string StockItemNotPermitted = "Only non-stock items are permitted Labor charges";
 
 
-        // Complexity of repair
-        public const string High = "High";
-        public const string Medium = "Medium";
-        public const string Low = "Low";
+		// Complexity of repair
+		public const string High = "High";
+		public const string Medium = "Medium";
+		public const string Low = "Low";
 
-        //Repair item types
-        public const string Battery = "Battery";
-        public const string Screen = "Screen";
-        public const string ScreenCover = "Screen Cover";
-        public const string BackCover = "Back Cover";
-        public const string Motherboard = "Motherboard";
-    }
+		//Repair item types
+		public const string Battery = "Battery";
+		public const string Screen = "Screen";
+		public const string ScreenCover = "Screen Cover";
+		public const string BackCover = "Back Cover";
+		public const string Motherboard = "Motherboard";
+
+		// Work order status
+		public const string OnHold = "On Hold";
+		public const string PendingPayment = "Pending Payment";
+		public const string ReadyForAssignment = "Ready For Assignment";
+		public const string Assigned = "Assignment";
+		public const string Completed = "Completed";
+		public const string Paid = "Paid";
+
+		// Work order priority
+		//public const string PriorityLow = "Low";
+		//public const string PriorityMedium = "Medium";
+		//public const string PriorityHigh = "High";
+	}
 }
