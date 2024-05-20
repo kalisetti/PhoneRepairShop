@@ -91,5 +91,26 @@ namespace PhoneRepairShop {
 				}
 			}
 		}
+
+		// Change the status based on whether the Hold check box is select or cleared
+		protected virtual void _(Events.FieldUpdated<RSSVWorkOrder, RSSVWorkOrder.hold> e) {
+			RSSVWorkOrder row = e.Row;
+
+			// If Hold is cleared, specify the status depending on the Prepayment field
+			// of the service
+			if (row.Hold == false) {
+				RSSVRepairService service = (RSSVRepairService)SelectFrom<RSSVRepairService>.
+					Where<RSSVRepairService.serviceID.IsEqual<RSSVWorkOrder.serviceID.FromCurrent>>.View.Select(this);
+
+				if (service != null && service.Prepayment == true)
+					e.Cache.SetValueExt<RSSVWorkOrder.status>(e.Row, WorkOrderStatusConstants.PendingPayment);
+				if (service != null && service.Prepayment == false)
+					e.Cache.SetValueExt<RSSVWorkOrder.status>(e.Row, WorkOrderStatusConstants.ReadyForAssignment);
+			}
+
+			// If Hold is selected, change the status to On Hold
+			if (row.Hold == true)
+				e.Cache.SetValueExt<RSSVWorkOrder.status>(e.Row, WorkOrderStatusConstants.OnHold);
+		}
 	}
 }

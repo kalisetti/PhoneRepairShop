@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -72,8 +72,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\RSSVRepairPriceMaint.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAAYwDwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T05:06:52.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T05:06:52.974Z"
             },
             {
               "$type": "Document",
@@ -83,7 +82,7 @@
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
               "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
               "RelativeToolTip": "PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAiwE4AAAAhAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAmwHAAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T13:25:54.091Z",
               "EditorCaption": ""
@@ -98,8 +97,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\Helper\\Messages.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T05:23:33.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T05:23:33.659Z"
             },
             {
               "$type": "Document",
@@ -111,8 +109,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\Helper\\Constants.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAYwCcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T05:22:15.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T05:22:15.836Z"
             },
             {
               "$type": "Document",
@@ -148,8 +145,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVRepairPrice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T04:58:27.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T04:58:27.277Z"
             },
             {
               "$type": "Document",
@@ -161,8 +157,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVLabor.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAYwCoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T01:41:14.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T01:41:14.75Z"
             },
             {
               "$type": "Document",
@@ -172,7 +167,7 @@
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
               "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAADwv0YAAAAUAAAA",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAgwEYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T06:57:21.254Z",
               "EditorCaption": ""
@@ -187,8 +182,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrderItem.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAkwEQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T11:12:59.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T11:12:59.565Z"
             },
             {
               "$type": "Document",
@@ -200,8 +194,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrderLabor.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T13:39:08.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T13:39:08.739Z"
             },
             {
               "$type": "Document",
@@ -213,8 +206,7 @@
               "RelativeToolTip": "..\\..\\..\\Pages\\RS\\RS203000.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-15T06:09:50.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T06:09:50.342Z"
             },
             {
               "$type": "Document",
@@ -226,8 +218,7 @@
               "RelativeToolTip": "..\\..\\..\\Pages\\RS\\RS301000.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-19T14:01:43.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T14:01:43.665Z"
             }
           ]
         }
