@@ -3,6 +3,9 @@ using PX.Data;
 using PX.Objects.AR;
 using PX.TM;
 
+using PX.Objects.CS;
+using PX.Objects.CR;
+
 namespace PhoneRepairShop {
 	[Serializable]
 	[PXCacheName("Repair Work Order")]
@@ -10,7 +13,7 @@ namespace PhoneRepairShop {
 		#region OrderNbr
 		[PXDBString(6, IsKey = true, IsUnicode = true, InputMask = ">CCCCCC")]
 		[PXDefault(PersistingCheck = PXPersistingCheck.NullOrBlank)]
-		[PXUIField(DisplayName = "Order Nbr.", 
+		[PXUIField(DisplayName = "Order Nbr.",
 			Visibility = PXUIVisibility.SelectorVisible, Required = true)]
 		[PXSelector(typeof(Search<RSSVWorkOrder.orderNbr>))]
 		public virtual string OrderNbr { get; set; }
@@ -61,11 +64,11 @@ namespace PhoneRepairShop {
 		#endregion
 
 		#region Assignee
-		//[PXDBInt()]
-		[PXDBGuid]
+		[PXDBInt()]
+		//[PXDBGuid]
 		[PXUIField(DisplayName = "Assignee")]
 		[PXOwnerSelector]
-		public virtual Guid? Assignee { get; set; }
+		public virtual int? Assignee { get; set; }
 		public abstract class assignee : PX.Data.BQL.BqlInt.Field<assignee> { }
 		#endregion
 
