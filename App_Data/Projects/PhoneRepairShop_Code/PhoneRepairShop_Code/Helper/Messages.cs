@@ -10,6 +10,15 @@ namespace PhoneRepairShop
 	[PXLocalizable()]
 	public static class Messages
 	{
+		// Labor Quantity validation messages
+		public const string QuantityCannotBeNegative =
+			"The value in the Quantity column cannot be negative.";
+
+		public const string QuantityToSmall =
+			"The value in the Quantity column has been converted to " +
+			"the minimum possible value.";
+
+
 		// Error messages
 		public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
 		public const string StockItemNotPermitted = "Only non-stock items are permitted Labor charges";
