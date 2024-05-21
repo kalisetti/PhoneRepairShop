@@ -31,6 +31,7 @@ namespace PhoneRepairShop {
 		[PXDBInt()]
 		[PXDefault]
 		[PXUIField(DisplayName = "Device", Required = true, Visibility = PXUIVisibility.SelectorVisible)]
+		[PXUIEnabled(typeof(Where<RSSVWorkOrder.hold.IsEqual<True>>))]
 		[PXSelector(
 			typeof(Search<RSSVDevice.deviceID>),
 			typeof(RSSVDevice.deviceCD),
@@ -45,6 +46,7 @@ namespace PhoneRepairShop {
 		[PXDBInt()]
 		[PXUIField(DisplayName = "Service", Required = true,
 			Visibility = PXUIVisibility.SelectorVisible)]
+		[PXUIEnabled(typeof(Where<RSSVWorkOrder.hold.IsEqual<True>>))]
 		[PXSelector(
 			typeof(Search<RSSVRepairService.serviceID>),
 			typeof(RSSVRepairService.serviceCD),
@@ -59,6 +61,7 @@ namespace PhoneRepairShop {
 		//[PXDBInt()]
 		//[PXUIField(DisplayName = "Customer ID")]
 		[CustomerActive(DisplayName = "Customer ID", Required = true)]
+		[PXUIEnabled(typeof(Where<RSSVWorkOrder.hold.IsEqual<True>>))]
 		public virtual int? CustomerID { get; set; }
 		public abstract class customerID : PX.Data.BQL.BqlInt.Field<customerID> { }
 		#endregion
@@ -139,6 +142,9 @@ namespace PhoneRepairShop {
 		[PXDBBool()]
 		[PXDefault(true)]
 		[PXUIField(DisplayName = "Hold")]
+		[PXUIVisible(typeof(Where<RSSVWorkOrder.status.IsEqual<workOrderStatusOnHold>.
+			Or<RSSVWorkOrder.status.IsEqual<workOrderStatusReadyForAssignment>>.
+			Or<RSSVWorkOrder.status.IsEqual<workOrderStatusPendingPayment>>>))]
 		public virtual bool? Hold { get; set; }
 		public abstract class hold : PX.Data.BQL.BqlBool.Field<hold> { }
 		#endregion
