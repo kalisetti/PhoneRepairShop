@@ -1,8 +1,10 @@
 using System;
+using System.Linq;
 using PX.Data;
 using PX.Data.BQL.Fluent;
 using PX.Objects.IN;
 using PX.Data.BQL;
+using PX.Objects.Common;
 
 namespace PhoneRepairShop {
 	public class RSSVWorkOrderEntry : PXGraph<RSSVWorkOrderEntry> {
@@ -144,6 +146,65 @@ namespace PhoneRepairShop {
 				e.Cache.RaiseExceptionHandling<RSSVWorkOrderLabor.quantity>(
 					line, e.NewValue,
 					new PXSetPropertyException(Messages.QuantityToSmall, PXErrorLevel.Warning));
+			}
+		}
+
+		// Display an error if a required repair item is missing in a work order
+		// for which a user clears the Hold check box.
+		protected virtual void _(Events.RowUpdating<RSSVWorkOrder> e) {
+			// The modified data record (not in the cache yet)
+			RSSVWorkOrder row = e.NewRow;
+
+			// The data record that is stored in the cache
+			RSSVWorkOrder originalRow = e.Row;
+
+			if (!e.Cache.ObjectsEqual<RSSVWorkOrder.hold, RSSVWorkOrder.status>(row, originalRow)) {
+				if (row.Status == WorkOrderStatusConstants.PendingPayment ||
+					row.Status == WorkOrderStatusConstants.ReadyForAssignment) {
+
+					// Select the required repair items for this service and device
+					PXResultset<RSSVRepairItem> repairItems = 
+						SelectFrom<RSSVRepairItem>.
+						Where<RSSVRepairItem.serviceID.IsEqual<RSSVWorkOrder.serviceID.FromCurrent>.
+						And<RSSVRepairItem.deviceID.IsEqual<RSSVWorkOrder.deviceID.FromCurrent>>.
+						And<RSSVRepairItem.required.IsEqual<True>>>.
+						AggregateTo<
+							GroupBy<RSSVRepairItem.repairItemType>,
+							Count<RSSVRepairItem.inventoryID>>.View.Select(this);
+
+					if (repairItems.Any()) {
+						foreach (PXResult<RSSVRepairItem> line in repairItems) {
+							// Check whether the required repair items exist
+							// in the work order.
+							var workOrderItems = RepairItems.Select().Where(item =>
+								item.GetItem<RSSVWorkOrderItem>().RepairItemType == line.GetItem<RSSVRepairItem>().RepairItemType
+								).ToList();
+
+							if (workOrderItems.Count() == 0) {
+								// Obtain the attribute assigned to 
+								// the RSSVWorkOrderItem.RepairItemType field.
+								PXStringListAttribute stringListAttribute = RepairItems.Cache
+									.GetAttributesReadonly<RSSVWorkOrderItem.repairItemType>()
+									.OfType<PXStringListAttribute>()
+									.SingleOrDefault();
+
+								// Obtain the label that corresponds to 
+								// the required repair item type.
+								stringListAttribute.ValueLabelDic.TryGetValue(
+									line.GetItem<RSSVRepairItem>().RepairItemType,
+									out string label);
+
+								// Display the error for the status field
+								WorkOrders.Cache.RaiseExceptionHandling<RSSVWorkOrder.status>(
+									row, row.Status, new PXSetPropertyException(
+										Messages.NoRequiredItem, label));
+
+								// Cancel the change of the status.
+								e.Cancel = true;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

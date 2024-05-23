@@ -10,6 +10,10 @@ namespace PhoneRepairShop
 	[PXLocalizable()]
 	public static class Messages
 	{
+		// Repair Item Type required for Work Orders
+		public const string NoRequiredItem =
+			"The work order does not contain a required repair item of the {0} type.";
+
 		// Labor Quantity validation messages
 		public const string QuantityCannotBeNegative =
 			"The value in the Quantity column cannot be negative.";
