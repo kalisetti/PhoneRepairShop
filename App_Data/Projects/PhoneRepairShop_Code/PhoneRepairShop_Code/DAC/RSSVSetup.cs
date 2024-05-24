@@ -5,7 +5,8 @@ using PX.TM;
 
 namespace PhoneRepairShop {
 	[Serializable]
-	[PXCacheName("RSSVSetup")]
+	[PXCacheName("Repair Work Order Preferences")]
+	[PXPrimaryGraph(typeof(RSSVSetupMaint))]
 	public class RSSVSetup : IBqlTable {
 		#region NumberingID
 		[PXDBString(10, IsUnicode = true, InputMask = "")]
