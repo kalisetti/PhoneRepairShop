@@ -8,6 +8,13 @@ using PX.Objects.Common;
 
 namespace PhoneRepairShop {
 	public class RSSVWorkOrderEntry : PXGraph<RSSVWorkOrderEntry> {
+		// The view for the auto-numbering of records
+		public PXSetup<RSSVSetup> AutoNumSetup;
+
+		// The graph constructor
+		public RSSVWorkOrderEntry() {
+			RSSVSetup setup = AutoNumSetup.Current;
+		}
 
 		public PXSave<RSSVWorkOrder> Save;
 		public PXCancel<RSSVWorkOrder> Cancel;
