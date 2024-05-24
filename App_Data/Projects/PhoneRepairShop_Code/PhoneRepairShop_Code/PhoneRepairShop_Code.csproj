@@ -71,9 +71,11 @@
     <Compile Include="DAC\RSSVRepairItem.cs" />
     <Compile Include="DAC\RSSVStockItemDevice.cs" />
     <Compile Include="DAC\RSSVWorkOrder.cs" />
+    <Compile Include="RSSVSetupMaint.cs" />
     <Compile Include="RSSVWorkOrderEntry.cs" />
     <Compile Include="DAC\RSSVWorkOrderItem.cs" />
     <Compile Include="DAC\RSSVWorkOrderLabor.cs" />
+    <Compile Include="DAC\RSSVSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
