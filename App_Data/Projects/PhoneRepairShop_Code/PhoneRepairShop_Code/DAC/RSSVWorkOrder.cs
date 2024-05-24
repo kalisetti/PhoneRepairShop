@@ -68,11 +68,11 @@ namespace PhoneRepairShop {
 		#endregion
 
 		#region Assignee
-		[PXDBInt()]
-		//[PXDBGuid]
+		//[PXDBInt()]
+		[PXDBGuid]
 		[PXUIField(DisplayName = "Assignee")]
 		[PXOwnerSelector]
-		public virtual int? Assignee { get; set; }
+		public virtual Guid? Assignee { get; set; }
 		public abstract class assignee : PX.Data.BQL.BqlInt.Field<assignee> { }
 		#endregion
 
