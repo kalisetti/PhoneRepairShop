@@ -282,6 +282,9 @@ namespace PhoneRepairShop {
 			Assign.SetEnabled(row.Status == WorkOrderStatusConstants.ReadyForAssignment);
 			Complete.SetEnabled(row.Status == WorkOrderStatusConstants.Assigned &&
 				WorkOrders.Cache.GetStatus(row) != PXEntryStatus.Inserted);
+
+			CreateInvoiceAction.SetVisible(WorkOrders.Current.Status == WorkOrderStatusConstants.Completed);
+			CreateInvoiceAction.SetEnabled(WorkOrders.Current.InvoiceNbr == null);
 		}
 
 		private static void CreateInvoice(RSSVWorkOrderEntry woEntry) {
@@ -295,6 +298,7 @@ namespace PhoneRepairShop {
 
 			doc = (ARInvoice)invoiceEntry.Document.Cache.CreateCopy(invoiceEntry.Document.Insert(doc));
 			doc.CustomerID = woEntry.WorkOrders.Current.CustomerID;
+			doc.FinPeriodID = "202012";
 			invoiceEntry.Document.Update(doc);
 
 			// Select the repair and labor items specified on the form.
@@ -310,6 +314,7 @@ namespace PhoneRepairShop {
 				tran.InventoryID = line.InventoryID;
 				tran.CuryUnitPrice = line.BasePrice;
 				tran.Qty = 1;
+
 				tran = invoiceEntry.Transactions.Update(tran);
 			}
 
