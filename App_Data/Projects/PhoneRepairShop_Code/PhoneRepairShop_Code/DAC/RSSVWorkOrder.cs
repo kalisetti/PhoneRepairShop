@@ -5,6 +5,8 @@ using PX.TM;
 
 using PX.Objects.CS;
 using PX.Objects.CR;
+using PX.Data.BQL.Fluent;
+using PX.Objects.SO;
 
 namespace PhoneRepairShop {
 	[Serializable]
@@ -169,6 +171,8 @@ namespace PhoneRepairShop {
 		#region InvoiceNbr
 		[PXDBString(15, IsUnicode = true, InputMask = "")]
 		[PXUIField(DisplayName = "Invoice Nbr.", Enabled = false)]
+		[PXSelector(typeof(SearchFor<SOInvoice.refNbr>.
+			Where<SOInvoice.docType.IsEqual<ARDocType.invoice>>))]
 		public virtual string InvoiceNbr { get; set; }
 		public abstract class invoiceNbr : PX.Data.BQL.BqlString.Field<invoiceNbr> { }
 		#endregion
