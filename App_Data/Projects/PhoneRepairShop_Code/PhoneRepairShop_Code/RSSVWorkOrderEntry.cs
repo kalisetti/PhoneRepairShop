@@ -22,7 +22,7 @@ namespace PhoneRepairShop {
 		#region Actions
 		public PXAction<RSSVWorkOrder> Assign;
 		[PXButton(CommitChanges = true)]
-		[PXUIField(DisplayName = "Assign", Enabled = false)]
+		[PXUIField(DisplayName = "Assign", Enabled = true)]
 		protected virtual void assign() {
 			// Get the current order from the cache.
 			RSSVWorkOrder row = WorkOrders.Current;
@@ -238,6 +238,13 @@ namespace PhoneRepairShop {
 					}
 				}
 			}
+		}
+
+		protected virtual void _(Events.RowSelected<RSSVWorkOrder> e) {
+			RSSVWorkOrder row = e.Row;
+			if (row == null) return;
+
+			Assign.SetEnabled(row.Status == WorkOrderStatusConstants.ReadyForAssignment);
 		}
 	}
 }

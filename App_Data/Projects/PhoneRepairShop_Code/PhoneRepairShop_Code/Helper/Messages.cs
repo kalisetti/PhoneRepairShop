@@ -44,7 +44,7 @@ namespace PhoneRepairShop
 		public const string OnHold = "On Hold";
 		public const string PendingPayment = "Pending Payment";
 		public const string ReadyForAssignment = "Ready For Assignment";
-		public const string Assigned = "Assignment";
+		public const string Assigned = "Assigned";
 		public const string Completed = "Completed";
 		public const string Paid = "Paid";
 
