@@ -7,6 +7,7 @@
         TypeName="PhoneRepairShop.RSSVWorkOrderEntry"
         PrimaryView="WorkOrders">
         <CallbackCommands>
+            <px:PXDSCallbackCommand Visible="false" CommitChanges="true" Name="Complete"></px:PXDSCallbackCommand>
         </CallbackCommands>
     </px:PXDataSource>
 </asp:Content>
@@ -89,6 +90,13 @@
                         </Levels>
                         <AutoSize Container="Window" Enabled="True" MinHeight="150" />
                         <ActionBar>
+                            <CustomItems>
+                                <px:PXToolBarButton Text="Complete">
+                                    <AutoCallBack Command="Complete" Target="ds">
+                                        <Behavior CommitChanges="True" />
+                                    </AutoCallBack>
+                                </px:PXToolBarButton>
+                            </CustomItems>
                         </ActionBar>
                     </px:PXGrid>
                 </Template>

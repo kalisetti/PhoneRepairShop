@@ -42,6 +42,24 @@ namespace PhoneRepairShop {
 			// Trigger the Save action to save changes in the database.
 			Actions.PressSave();
 		}
+
+		public PXAction<RSSVWorkOrder> Complete;
+		[PXButton(CommitChanges = true)]
+		[PXUIField(DisplayName = "Complete", Enabled = false)]
+		protected virtual void complete() {
+			// Get the current order from the cache.
+			RSSVWorkOrder row = WorkOrders.Current;
+
+			// Change the order status to Completed.
+			row.Status = WorkOrderStatusConstants.Completed;
+			row.DateCompleted = this.Accessinfo.BusinessDate;
+
+			// Update the data record in the cache.
+			WorkOrders.Update(row);
+
+			// Trigger the Save action to save changes in the database.
+			Actions.PressSave();
+		}
 		#endregion
 
 		// Views
@@ -245,6 +263,8 @@ namespace PhoneRepairShop {
 			if (row == null) return;
 
 			Assign.SetEnabled(row.Status == WorkOrderStatusConstants.ReadyForAssignment);
+			Complete.SetEnabled(row.Status == WorkOrderStatusConstants.Assigned &&
+				WorkOrders.Cache.GetStatus(row) != PXEntryStatus.Inserted);
 		}
 	}
 }
