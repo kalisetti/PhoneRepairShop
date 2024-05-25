@@ -7,6 +7,7 @@ using PX.Data.BQL;
 using PX.Objects.Common;
 using PX.Objects.SO;
 using PX.Objects.AR;
+using System.Collections;
 
 namespace PhoneRepairShop {
 	public class RSSVWorkOrderEntry : PXGraph<RSSVWorkOrderEntry> {
@@ -61,6 +62,20 @@ namespace PhoneRepairShop {
 
 			// Trigger the Save action to save changes in the database.
 			Actions.PressSave();
+		}
+
+		public PXAction<RSSVWorkOrder> CreateInvoiceAction;
+		[PXButton(CommitChanges = true)]
+		[PXUIField(DisplayName = "Create Invoice", Enabled = true)]
+		protected virtual IEnumerable createInvoiceAction(PXAdapter adapter) {
+			this.Save.Press();
+			var graphCopy = this;
+
+			PXLongOperation.StartOperation(graphCopy, delegate () {
+				CreateInvoice(graphCopy);
+			});
+
+			return adapter.Get();
 		}
 		#endregion
 
