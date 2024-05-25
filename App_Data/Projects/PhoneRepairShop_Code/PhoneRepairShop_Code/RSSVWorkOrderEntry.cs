@@ -5,6 +5,8 @@ using PX.Data.BQL.Fluent;
 using PX.Objects.IN;
 using PX.Data.BQL;
 using PX.Objects.Common;
+using PX.Objects.SO;
+using PX.Objects.AR;
 
 namespace PhoneRepairShop {
 	public class RSSVWorkOrderEntry : PXGraph<RSSVWorkOrderEntry> {
@@ -265,6 +267,54 @@ namespace PhoneRepairShop {
 			Assign.SetEnabled(row.Status == WorkOrderStatusConstants.ReadyForAssignment);
 			Complete.SetEnabled(row.Status == WorkOrderStatusConstants.Assigned &&
 				WorkOrders.Cache.GetStatus(row) != PXEntryStatus.Inserted);
+		}
+
+		private static void CreateInvoice(RSSVWorkOrderEntry woEntry) {
+			// Create an instance of the SOInvoiceEntry graph.
+			var invoiceEntry = PXGraph.CreateInstance<SOInvoiceEntry>();
+
+			// Initialize the summary of the invoice.
+			var doc = new ARInvoice() {
+				DocType = ARDocType.Invoice
+			};
+
+			doc = (ARInvoice)invoiceEntry.Document.Cache.CreateCopy(invoiceEntry.Document.Insert(doc));
+			doc.CustomerID = woEntry.WorkOrders.Current.CustomerID;
+			invoiceEntry.Document.Update(doc);
+
+			// Select the repair and labor items specified on the form.
+			var repairItems = SelectFrom<RSSVWorkOrderItem>.
+				Where<RSSVWorkOrderItem.orderNbr.IsEqual<RSSVWorkOrder.orderNbr.FromCurrent>>.View.Select(woEntry);
+			var laborItems = SelectFrom<RSSVWorkOrderLabor>.
+				Where<RSSVWorkOrderLabor.orderNbr.IsEqual<RSSVWorkOrderLabor.orderNbr.FromCurrent>>.View.Select(woEntry);
+
+			// Add the lines associated with the repair items
+			// (from the Repair Items tab).
+			foreach (RSSVWorkOrderItem line in repairItems) {
+				var tran = (ARTran)invoiceEntry.Transactions.Cache.CreateCopy(invoiceEntry.Transactions.Insert());
+				tran.InventoryID = line.InventoryID;
+				tran.CuryUnitPrice = line.BasePrice;
+				tran.Qty = 1;
+				tran = invoiceEntry.Transactions.Update(tran);
+			}
+
+			// Add the lines associated with labor (from the Labor tab).
+			foreach (RSSVWorkOrderLabor line in laborItems) {
+				var tran = (ARTran)invoiceEntry.Transactions.Cache.CreateCopy(invoiceEntry.Transactions.Insert());
+				tran.InventoryID = line.InventoryID;
+				tran.CuryUnitPrice = line.DefaultPrice;
+				tran.CuryExtPrice = line.ExtPrice;
+				tran.Qty = line.Quantity;
+				tran = invoiceEntry.Transactions.Update(tran);
+			}
+
+			// Save the invoice to the database.
+			invoiceEntry.Save.Press();
+
+			// Assign the generated invoice number and save the changes.
+			woEntry.WorkOrders.Current.InvoiceNbr = invoiceEntry.Document.Current.RefNbr;
+			woEntry.WorkOrders.Cache.MarkUpdated(woEntry.WorkOrders.Current);
+			woEntry.Actions.PressSave();
 		}
 	}
 }
