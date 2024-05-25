@@ -32,7 +32,7 @@
 
             <px:PXLayoutRule runat="server" ID="CstPXLayoutRule15" StartColumn="True" ControlSize="SM" LabelsWidth="S" />
             <px:PXNumberEdit runat="server" ID="CstPXNumberEdit10" DataField="OrderTotal" Size="SM"></px:PXNumberEdit>
-            <px:PXTextEdit runat="server" ID="CstPXTextEdit8" DataField="InvoiceNbr"></px:PXTextEdit>
+            <px:PXSelector runat="server" ID="CstPXTextEdit8" DataField="InvoiceNbr" Enabled="False" AllowEdit="True"></px:PXSelector>
         </Template>
     </px:PXFormView>
 </asp:Content>
