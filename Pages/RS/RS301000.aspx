@@ -60,7 +60,7 @@
                                     <px:PXGridColumn DataField="RepairItemType" CommitChanges="True" Width="70"></px:PXGridColumn>
                                     <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70"></px:PXGridColumn>
                                     <px:PXGridColumn DataField="InventoryID_description" Width="280"></px:PXGridColumn>
-                                    <px:PXGridColumn DataField="BasePrice" Width="100"></px:PXGridColumn>
+                                    <px:PXGridColumn CommitChanges="True" DataField="BasePrice" Width="100"></px:PXGridColumn>
                                     <px:PXGridColumn Type="CheckBox" DataField="IsDefault" CommitChanges="true" Width="80"></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>

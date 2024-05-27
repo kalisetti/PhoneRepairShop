@@ -298,7 +298,7 @@ namespace PhoneRepairShop {
 
 			doc = (ARInvoice)invoiceEntry.Document.Cache.CreateCopy(invoiceEntry.Document.Insert(doc));
 			doc.CustomerID = woEntry.WorkOrders.Current.CustomerID;
-			doc.FinPeriodID = "202012";
+			doc.FinPeriodID = "202405";
 			invoiceEntry.Document.Update(doc);
 
 			// Select the repair and labor items specified on the form.

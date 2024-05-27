@@ -46,6 +46,10 @@ namespace PhoneRepairShop {
 		#region ExtPrice
 		[PXDBDecimal()]
 		[PXUIField(DisplayName = "Ext Price")]
+		[PXFormula(
+			typeof(Mult<RSSVWorkOrderLabor.quantity, RSSVWorkOrderLabor.defaultPrice>),
+			typeof(SumCalc<RSSVWorkOrder.orderTotal>)
+			)]
 		public virtual Decimal? ExtPrice { get; set; }
 		public abstract class extPrice : PX.Data.BQL.BqlDecimal.Field<extPrice> { }
 		#endregion
