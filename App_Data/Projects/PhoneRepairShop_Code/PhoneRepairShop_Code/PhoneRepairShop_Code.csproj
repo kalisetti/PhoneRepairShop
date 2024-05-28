@@ -78,6 +78,7 @@
     <Compile Include="DAC\RSSVWorkOrderItem.cs" />
     <Compile Include="DAC\RSSVWorkOrderLabor.cs" />
     <Compile Include="DAC\RSSVSetup.cs" />
+    <Compile Include="DAC\ARRegisterExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
