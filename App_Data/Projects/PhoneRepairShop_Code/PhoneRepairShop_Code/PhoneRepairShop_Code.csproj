@@ -80,6 +80,7 @@
     <Compile Include="DAC\RSSVSetup.cs" />
     <Compile Include="DAC\ARRegisterExtensions.cs" />
     <Compile Include="ARPaymentEntry.cs" />
+<Compile Include="RSSVAssignProcess.cs" />
 <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

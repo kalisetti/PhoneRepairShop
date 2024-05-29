@@ -13,6 +13,8 @@
   <File path="CstPublished\Pages_RS\RS203000.aspx.cs" method="Delete" />
   <File path="CstPublished\Pages_RS\RS301000.aspx" method="Delete" />
   <File path="CstPublished\Pages_RS\RS301000.aspx.cs" method="Delete" />
+  <File path="CstPublished\Pages_RS\RS501000.aspx" method="Delete" />
+  <File path="CstPublished\Pages_RS\RS501000.aspx.cs" method="Delete" />
   <File path="Bin\PhoneRepairShop_Code.dll" method="Delete" />
   <File path="Pages\RS\RS101000.aspx" method="Delete" />
   <File path="Pages\RS\RS101000.aspx.cs" method="Delete" />
@@ -24,4 +26,6 @@
   <File path="Pages\RS\RS203000.aspx.cs" method="Delete" />
   <File path="Pages\RS\RS301000.aspx" method="Delete" />
   <File path="Pages\RS\RS301000.aspx.cs" method="Delete" />
+  <File path="Pages\RS\RS501000.aspx" method="Delete" />
+  <File path="Pages\RS\RS501000.aspx.cs" method="Delete" />
 </Rollback>

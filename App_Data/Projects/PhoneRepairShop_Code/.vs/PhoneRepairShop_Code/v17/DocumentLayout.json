@@ -3,18 +3,8 @@
   "WorkspaceRootPath": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\ardocumentrelease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\ardocumentrelease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\app_data\\coderepository\\px.objects\\ar\\arpaymententry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\app_data\\coderepository\\px.objects\\ar\\ardocumentrelease.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RSSVWorkOrderEntry.cs",
-              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
-              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
-              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
-              "RelativeToolTip": "PhoneRepairShop_Code\\RSSVWorkOrderEntry.cs",
-              "ViewState": "AQIAADYBAAAAAAAAAAAcwB4BAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T03:20:28.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ARDocumentRelease.cs",
-              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\ARDocumentRelease.cs",
-              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\ARDocumentRelease.cs",
-              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\ARDocumentRelease.cs",
-              "RelativeToolTip": "PhoneRepairShop_Code\\ARDocumentRelease.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAuwDAAAAA/AAAA",
+              "Title": "RSSVAssignProcess.cs",
+              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVAssignProcess.cs",
+              "RelativeDocumentMoniker": "PhoneRepairShop_Code\\RSSVAssignProcess.cs",
+              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVAssignProcess.cs",
+              "RelativeToolTip": "PhoneRepairShop_Code\\RSSVAssignProcess.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T02:58:19.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ARPaymentEntry.cs",
-              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\CodeRepository\\PX.Objects\\AR\\ARPaymentEntry.cs",
-              "RelativeDocumentMoniker": "..\\..\\CodeRepository\\PX.Objects\\AR\\ARPaymentEntry.cs",
-              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\CodeRepository\\PX.Objects\\AR\\ARPaymentEntry.cs",
-              "RelativeToolTip": "..\\..\\CodeRepository\\PX.Objects\\AR\\ARPaymentEntry.cs",
-              "ViewState": "AQIAAFsDAAAAAAAAAAAawHcDAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T02:39:50Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ARDocumentRelease.cs",
-              "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\CodeRepository\\PX.Objects\\AR\\ARDocumentRelease.cs",
-              "RelativeDocumentMoniker": "..\\..\\CodeRepository\\PX.Objects\\AR\\ARDocumentRelease.cs",
-              "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\CodeRepository\\PX.Objects\\AR\\ARDocumentRelease.cs",
-              "RelativeToolTip": "..\\..\\CodeRepository\\PX.Objects\\AR\\ARDocumentRelease.cs",
-              "ViewState": "AQIAAJoQAAAAAAAAAAAawK0QAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T02:26:43.165Z",
+              "WhenOpened": "2024-05-29T05:39:55.518Z",
               "EditorCaption": ""
             }
           ]
