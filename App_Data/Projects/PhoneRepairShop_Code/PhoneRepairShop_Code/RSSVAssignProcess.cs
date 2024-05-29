@@ -1,26 +1,29 @@
 using System;
 using PX.Data;
+using PX.Data.BQL.Fluent;
 
 namespace PhoneRepairShop {
 	public class RSSVAssignProcess : PXGraph<RSSVAssignProcess> {
 
-		//public PXSave<MasterTable> Save;
-		//public PXCancel<MasterTable> Cancel;
+		public PXCancel<RSSVWorkOrder> Cancel;
+		public PXProcessing<RSSVWorkOrder,
+			Where<RSSVWorkOrder.status.IsEqual<workOrderStatusReadyForAssignment>>> WorkOrders;
 
-
-		//public PXFilter<MasterTable> MasterView;
-		//public PXFilter<DetailsTable> DetailsView;
-
-		//[Serializable]
-		//public class MasterTable : IBqlTable {
-
-		//}
-
-		//[Serializable]
-		//public class DetailsTable : IBqlTable {
-
-		//}
-
+		public RSSVAssignProcess() {
+			WorkOrders.SetProcessCaption("Assign");
+			WorkOrders.SetProcessAllCaption("Assign All");
+			WorkOrders.SetProcessDelegate<RSSVWorkOrderEntry>(
+				delegate (RSSVWorkOrderEntry graph, RSSVWorkOrder order) {
+					try {
+						graph.Clear();
+						graph.AssignOrder(order, true);
+					}
+					catch (Exception e) {
+						PXProcessing<RSSVWorkOrder>.SetError(e);
+					}
+				}
+			);
+		}
 
 	}
 }
