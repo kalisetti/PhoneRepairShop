@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# PX1008: The reference to {0} is captured in the {1} delegate and will cause synchronous execution of the delegate. It may lead to random bugs and data consistency issues.
+dotnet_diagnostic.PX1008.severity = silent

@@ -10,6 +10,10 @@ namespace PhoneRepairShop
 	[PXLocalizable()]
 	public static class Messages
 	{
+		// Assign work orders message
+		public const string WorkOrderAssigned =
+			"The {0} work order has been successfully assigned.";
+
 		// Repair Item Type required for Work Orders
 		public const string NoRequiredItem =
 			"The work order does not contain a required repair item of the {0} type.";

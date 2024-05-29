@@ -26,24 +26,61 @@ namespace PhoneRepairShop {
 		public PXAction<RSSVWorkOrder> Assign;
 		[PXButton(CommitChanges = true)]
 		[PXUIField(DisplayName = "Assign", Enabled = true)]
-		protected virtual void assign() {
-			// Get the current order from the cache.
-			RSSVWorkOrder row = WorkOrders.Current;
+		protected virtual IEnumerable assign(PXAdapter adapter) {
+			var graphCopy = this;
+			foreach (RSSVWorkOrder order in adapter.Get()) {
+				Actions.PressSave();
 
-			// If an Assignee has not been specified,
-			// change the Assignee box value to the default employee value.
-			if (row.Assignee == null) {
-				row.Assignee = AutoNumSetup.Current.DefaultEmployee;
+				PXLongOperation.StartOperation(graphCopy, delegate () {
+					AssignOrder(order);
+				});
+				yield return order;
+			}
+		}
+
+		//protected virtual void assign() {
+		//	// Get the current order from the cache.
+		//	RSSVWorkOrder row = WorkOrders.Current;
+
+		//	// If an Assignee has not been specified,
+		//	// change the Assignee box value to the default employee value.
+		//	if (row.Assignee == null) {
+		//		row.Assignee = AutoNumSetup.Current.DefaultEmployee;
+		//	}
+
+		//	// Change the order status to Assigned.
+		//	row.Status = WorkOrderStatusConstants.Assigned;
+
+		//	// Update the data record in the cache.
+		//	WorkOrders.Update(row);
+
+		//	// Trigger the Save action to save changes in the database.
+		//	Actions.PressSave();
+		//}
+
+		public void AssignOrder(RSSVWorkOrder order, bool isMassProcess = false) {
+			WorkOrders.Current = order;
+
+			// If the assignee is not specified, specify the default employee.
+			if (order.Assignee == null) {
+				// Retrieve the record with default setting
+				RSSVSetup setupRecord = AutoNumSetup.Select();
+				order.Assignee = setupRecord.DefaultEmployee;
 			}
 
 			// Change the order status to Assigned.
-			row.Status = WorkOrderStatusConstants.Assigned;
+			order.Status = WorkOrderStatusConstants.Assigned;
 
-			// Update the data record in the cache.
-			WorkOrders.Update(row);
+			// Update the work order in the cache.
+			WorkOrders.Update(order);
 
-			// Trigger the Save action to save changes in the database.
+			// Trigger the Save action to save the changes to the database
 			Actions.PressSave();
+
+			// Display the message to indicate successful processing.
+			if (isMassProcess) {
+				PXProcessing.SetInfo(String.Format(Messages.WorkOrderAssigned, order.OrderNbr));
+			}
 		}
 
 		public PXAction<RSSVWorkOrder> Complete;
