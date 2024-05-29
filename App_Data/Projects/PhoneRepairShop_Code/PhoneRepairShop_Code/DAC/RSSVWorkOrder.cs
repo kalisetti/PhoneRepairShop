@@ -12,6 +12,13 @@ namespace PhoneRepairShop {
 	[Serializable]
 	[PXCacheName("Repair Work Order")]
 	public class RSSVWorkOrder : IBqlTable {
+		#region Selected
+		[PXBool]
+		[PXUIField(DisplayName = "Selected")]
+		public virtual bool? Selected { get; set; }
+		public abstract class selected : PX.Data.BQL.BqlBool.Field<selected> { }
+		#endregion
+
 		#region OrderNbr
 		[PXDBString(15, IsKey = true, IsUnicode = true, InputMask = ">CCCCCCCCCCCCCCC")]
 		[PXDefault(PersistingCheck = PXPersistingCheck.NullOrBlank)]
