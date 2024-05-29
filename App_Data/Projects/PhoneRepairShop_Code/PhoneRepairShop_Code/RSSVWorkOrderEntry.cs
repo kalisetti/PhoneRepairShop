@@ -283,7 +283,8 @@ namespace PhoneRepairShop {
 			Complete.SetEnabled(row.Status == WorkOrderStatusConstants.Assigned &&
 				WorkOrders.Cache.GetStatus(row) != PXEntryStatus.Inserted);
 
-			CreateInvoiceAction.SetVisible(WorkOrders.Current.Status == WorkOrderStatusConstants.Completed);
+			CreateInvoiceAction.SetVisible(WorkOrders.Current.Status == WorkOrderStatusConstants.Completed ||
+				WorkOrders.Current.Status == WorkOrderStatusConstants.PendingPayment);
 			CreateInvoiceAction.SetEnabled(WorkOrders.Current.InvoiceNbr == null);
 		}
 

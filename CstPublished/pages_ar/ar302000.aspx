@@ -149,7 +149,7 @@
                     <px:PXControlParam ControlID="form" Name="ARPayment.pMInstanceID" PropertyName="DataControls[&quot;edPMInstanceID&quot;].Value" ></px:PXControlParam>
                 </Parameters>
             </px:PXSelector>
-            <px:PXLayoutRule LabelsWidth="M" ID="PXLayoutRule4" runat="server" StartColumn="True" ControlSize="M" ></px:PXLayoutRule>
+            <px:PXLayoutRule ID="PXLayoutRule4" runat="server" StartColumn="True" ControlSize="M" ></px:PXLayoutRule>
             <px:PXCheckBox runat="server" DataField="IsRUTROTPayment" CommitChanges="True" Size="m" ID="chkIsRUTROT" AlignLeft="True" ></px:PXCheckBox>
 	<px:PXNumberEdit runat="server" ID="CstPXNumberEdit1" DataField="UsrPrepaymentPercent" /></Template>
     </px:PXFormView>

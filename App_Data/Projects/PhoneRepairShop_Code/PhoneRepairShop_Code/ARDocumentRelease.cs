@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PX.Data;
 using PhoneRepairShop;
 using PX.Data.BQL.Fluent;
+using PX.Objects.CN.Compliance.AR.CacheExtensions;
 
 namespace PX.Objects.AR {
 	public class ARReleaseProcess_Extension : PXGraphExtension<ARReleaseProcess> {
@@ -36,6 +37,35 @@ namespace PX.Objects.AR {
 			}
 
 			UpdWorkOrder.Cache.Persisted(false);
+		}
+
+		public delegate void UpdateBalancesDelegate(ARAdjust adj, ARRegister adjddoc, ARTran adjdtran);
+
+		[PXOverride]
+		public virtual void UpdateBalances(ARAdjust adj, ARRegister adjddoc, ARTran adjdtran, UpdateBalancesDelegate baseMethod) {
+			baseMethod(adj, adjddoc, adjdtran);
+
+			ARRegister ardoc = (ARRegister)adjddoc;
+			ARRegister cached = (ARRegister)Base.ARDocument.Cache.Locate(ardoc);
+			if (cached != null) {
+				ardoc = cached;
+			}
+
+			var payment = SelectFrom<ARPayment>.
+				Where<ARPayment.refNbr.IsEqual<ARAdjust.adjgRefNbr.FromCurrent>>.View.SelectSingleBound(Base, new[] { adjddoc });
+			var paymentExt = PXCache<ARRegister>.GetExtension<ARRegisterExt>(payment);
+
+			RSSVWorkOrder order = SelectFrom<RSSVWorkOrder>.
+				Where<RSSVWorkOrder.invoiceNbr.IsEqual<ARRegister.refNbr.FromCurrent>>.View.SelectSingleBound(Base, new[] { adjddoc });
+			if (order != null && paymentExt != null
+				&& order.Status == WorkOrderStatusConstants.PendingPayment) {
+				var paidPercent = (ardoc.CuryOrigDocAmt - ardoc.CuryDocBal) * 100 / adjddoc.CuryOrigDocAmt;
+				if (paidPercent >= paymentExt.UsrPrepaymentPercent) {
+					order.Status = WorkOrderStatusConstants.ReadyForAssignment;
+					UpdWorkOrder.Update(order);
+					// No need to call the Persist method
+				}
+			}
 		}
 	}
 }
