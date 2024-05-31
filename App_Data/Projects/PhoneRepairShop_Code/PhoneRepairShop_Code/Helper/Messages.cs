@@ -10,7 +10,12 @@ namespace PhoneRepairShop
 	[PXLocalizable()]
 	public static class Messages
 	{
-		// Assign work orders message
+		// Exceeding Maximum Number Of Assigned Work Orders
+		public const string ExceedingMaximumNumberOfAssignedWorkOrders =
+			"Updating the number of assigned work order for the employee " +
+			"will lead to exceeding of the maximum number of assigned work orders, which is 10.";
+
+		// Work Order Assigned
 		public const string WorkOrderAssigned =
 			"The {0} work order has been successfully assigned.";
 
