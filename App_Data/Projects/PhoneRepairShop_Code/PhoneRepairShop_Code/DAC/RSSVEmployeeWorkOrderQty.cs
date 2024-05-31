@@ -9,14 +9,12 @@ namespace PhoneRepairShop
   {
     #region Userid
     [PXDBInt(IsKey = true)]
-    [PXUIField(DisplayName = "Userid")]
     public virtual int? Userid { get; set; }
     public abstract class userid : PX.Data.BQL.BqlInt.Field<userid> { }
     #endregion
 
     #region NbrOfAssignedOrders
     [PXDBInt()]
-    [PXUIField(DisplayName = "Nbr Of Assigned Orders")]
     public virtual int? NbrOfAssignedOrders { get; set; }
     public abstract class nbrOfAssignedOrders : PX.Data.BQL.BqlInt.Field<nbrOfAssignedOrders> { }
     #endregion
