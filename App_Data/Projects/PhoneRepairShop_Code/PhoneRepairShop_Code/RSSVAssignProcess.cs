@@ -84,7 +84,7 @@ namespace PhoneRepairShop {
 				}
 			);
 
-			PXUIFieldAttribute.SetEnabled<RSSVWorkOrderToAssign.assignee>(
+			PXUIFieldAttribute.SetEnabled<RSSVWorkOrderToAssign.assignTo>(
 				WorkOrders.Cache, null, true);
 		}
 

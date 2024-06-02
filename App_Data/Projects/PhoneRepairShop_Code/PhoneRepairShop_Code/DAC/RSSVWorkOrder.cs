@@ -7,6 +7,7 @@ using PX.Objects.CS;
 using PX.Objects.CR;
 using PX.Data.BQL.Fluent;
 using PX.Objects.SO;
+using PX.Objects.EP;
 
 namespace PhoneRepairShop {
 	[Serializable]
@@ -230,6 +231,46 @@ namespace PhoneRepairShop {
 	#region RSSVWorkOrderToAssign
 	[PXHidden]
 	public class RSSVWorkOrderToAssign : RSSVWorkOrder {
+		#region DefaultAssignee
+		[PXGuid]
+		[PXUIField(DisplayName = "Default Assignee")]
+		[PXDBScalar(
+			typeof(
+			SelectFrom<EPEmployee>.
+				LeftJoin<RSSVEmployeeWorkOrderQty>.
+					On<EPEmployee.userID.IsEqual<RSSVEmployeeWorkOrderQty.userid>>.
+				Where<EPEmployee.userID.IsNotNull>.
+				OrderBy<RSSVEmployeeWorkOrderQty.nbrOfAssignedOrders.Asc>.
+					SearchFor<EPEmployee.userID>
+			)
+		)]
+		[PXOwnerSelector]
+		public virtual Guid? DefaultAssignee { get; set; }
+		public abstract class defaultAssignee : PX.Data.BQL.BqlGuid.Field<defaultAssignee> { }
+		#endregion
+
+		#region AssignTo
+		[PXGuid]
+		[PXUIField(DisplayName = "Assign To")]
+		[PXDBCalced(
+			typeof(
+				RSSVWorkOrderToAssign.assignee.
+				When<RSSVWorkOrderToAssign.assignee.IsNotNull>.
+				Else<RSSVWorkOrderToAssign.defaultAssignee>
+			), typeof(Guid?)
+		)]
+		[PXOwnerSelector]
+		public virtual Guid? AssignTo { get; set; }
+		public abstract class assignTo : PX.Data.BQL.BqlGuid.Field<assignTo> { }
+		#endregion
+
+		#region NbrOfAssginedOrders
+		[PXInt]
+		[PXUIField(DisplayName = "Number of Assigned Work Orders")]
+		public virtual int? NbrOfAssignedOrders { get; set; }
+		public abstract class nbrOfAssignedOrders : PX.Data.BQL.BqlInt.Field<nbrOfAssignedOrders> { }
+		#endregion
+
 		#region Status
 		public new abstract class status : PX.Data.BQL.BqlString.Field<status> { }
 		#endregion

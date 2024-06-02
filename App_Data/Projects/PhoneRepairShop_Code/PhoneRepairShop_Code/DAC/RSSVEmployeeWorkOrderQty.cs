@@ -7,9 +7,10 @@ namespace PhoneRepairShop {
 	[RSSVEmployeeWorkOrderQtyAccumulator]
 	public class RSSVEmployeeWorkOrderQty : IBqlTable {
 		#region Userid
-		[PXDBInt(IsKey = true)]
-		public virtual int? Userid { get; set; }
-		public abstract class userid : PX.Data.BQL.BqlInt.Field<userid> { }
+		[PXDBGuid(IsKey = true)]
+		//[PXDBInt(IsKey = true)]
+		public virtual Guid? Userid { get; set; }
+		public abstract class userid : PX.Data.BQL.BqlGuid.Field<userid> { }
 		#endregion
 
 		#region NbrOfAssignedOrders
@@ -45,6 +46,7 @@ namespace PhoneRepairShop {
 					)
 				);
 			}
+
 
 			// Update NbrOfAssignedOrders by using Summarize.
 			columns.Update<RSSVEmployeeWorkOrderQty.nbrOfAssignedOrders>(
