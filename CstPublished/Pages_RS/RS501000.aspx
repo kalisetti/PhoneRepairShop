@@ -24,8 +24,8 @@
         <Levels>
             <px:PXGridLevel DataMember="WorkOrders">
                 <RowTemplate>
-                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="Assignee" AutoRefresh="true"></px:PXSegmentMask>
-                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask18" DataField="AssignTo" AutoRefresh="true"></px:PXSegmentMask>
+                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="Assignee" AutoRefresh="True"></px:PXSegmentMask>
+                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask18" DataField="AssignTo" AutoRefresh="True"></px:PXSegmentMask>
                 </RowTemplate>
 
                 <Columns>

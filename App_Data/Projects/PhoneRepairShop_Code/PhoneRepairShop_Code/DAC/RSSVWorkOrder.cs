@@ -76,7 +76,7 @@ namespace PhoneRepairShop {
 		[PXUIField(DisplayName = "Assignee")]
 		[PXOwnerSelector]
 		public virtual Guid? Assignee { get; set; }
-		public abstract class assignee : PX.Data.BQL.BqlInt.Field<assignee> { }
+		public abstract class assignee : PX.Data.BQL.BqlGuid.Field<assignee> { }
 		#endregion
 
 		#region DateCreated
