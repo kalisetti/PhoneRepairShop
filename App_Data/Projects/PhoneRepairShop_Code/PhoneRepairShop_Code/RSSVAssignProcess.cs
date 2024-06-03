@@ -3,6 +3,7 @@ using PX.Data;
 using PX.Data.BQL.Fluent;
 using System.Collections.Generic;
 using PX.Data.BQL;
+using System.Linq;
 
 namespace PhoneRepairShop {
 	public class RSSVAssignProcess : PXGraph<RSSVAssignProcess> {
@@ -99,6 +100,8 @@ namespace PhoneRepairShop {
 
 		public static void AssignOrders(List<RSSVWorkOrderToAssign> orders) {
 			RSSVWorkOrderEntry graph = PXGraph.CreateInstance<RSSVWorkOrderEntry>();
+			// The result set to run the report on
+			PXReportResultset assignedOrders = new PXReportResultset(typeof(RSSVWorkOrder)); 
 			foreach (RSSVWorkOrderToAssign order in orders) { 
 				try {
 					// Change the assignee to the value selected on the form
@@ -110,11 +113,18 @@ namespace PhoneRepairShop {
 
 					// Assign the work order.
 					graph.AssignOrder(order, true);
+
+					// Add to the result set the order that has been successfully assigned
+					if (order.Status == WorkOrderStatusConstants.Assigned) {
+						assignedOrders.Add(order);
+					}
 				}
 				catch (Exception e) {
 					PXProcessing<RSSVWorkOrderToAssign>.SetError(orders.IndexOf(order), e);
 				}
 			}
+			throw new PXReportRequiredException(assignedOrders, "RS601000",
+				Messages.ReportRS601000Title);
 		}
 
 		protected virtual void _(Events.FieldSelecting<RSSVWorkOrderToAssign, RSSVWorkOrderToAssign.nbrOfAssignedOrders> e) {

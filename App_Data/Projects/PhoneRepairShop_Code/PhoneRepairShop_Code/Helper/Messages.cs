@@ -10,6 +10,8 @@ namespace PhoneRepairShop
 	[PXLocalizable()]
 	public static class Messages
 	{
+		public const string ReportRS601000Title = "Assigned Work Orders";
+
 		// Exceeding Maximum Number Of Assigned Work Orders
 		public const string ExceedingMaximumNumberOfAssignedWorkOrders =
 			"Updating the number of assigned work order for the employee " +
