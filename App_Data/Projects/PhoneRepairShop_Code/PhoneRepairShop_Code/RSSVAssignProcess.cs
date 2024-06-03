@@ -1,6 +1,7 @@
 using System;
 using PX.Data;
 using PX.Data.BQL.Fluent;
+using System.Collections.Generic;
 
 namespace PhoneRepairShop {
 	public class RSSVAssignProcess : PXGraph<RSSVAssignProcess> {
@@ -72,17 +73,18 @@ namespace PhoneRepairShop {
 		public RSSVAssignProcess() {
 			WorkOrders.SetProcessCaption("Assign");
 			WorkOrders.SetProcessAllCaption("Assign All");
-			WorkOrders.SetProcessDelegate<RSSVWorkOrderEntry>(
-				delegate (RSSVWorkOrderEntry graph, RSSVWorkOrderToAssign order) {
-					try {
-						graph.Clear();
-						graph.AssignOrder(order, true);
-					}
-					catch (Exception e) {
-						PXProcessing<RSSVWorkOrderToAssign>.SetError(e);
-					}
-				}
-			);
+			WorkOrders.SetProcessDelegate(AssignOrders);
+			//WorkOrders.SetProcessDelegate<RSSVWorkOrderEntry>(
+			//	delegate (RSSVWorkOrderEntry graph, RSSVWorkOrderToAssign order) {
+			//		try {
+			//			graph.Clear();
+			//			graph.AssignOrder(order, true);
+			//		}
+			//		catch (Exception e) {
+			//			PXProcessing<RSSVWorkOrderToAssign>.SetError(e);
+			//		}
+			//	}
+			//);
 
 			PXUIFieldAttribute.SetEnabled<RSSVWorkOrderToAssign.assignTo>(
 				WorkOrders.Cache, null, true);
@@ -91,6 +93,26 @@ namespace PhoneRepairShop {
 		public override bool IsDirty {
 			get {
 				return false;
+			}
+		}
+
+		public static void AssignOrders(List<RSSVWorkOrderToAssign> orders) {
+			RSSVWorkOrderEntry graph = PXGraph.CreateInstance<RSSVWorkOrderEntry>();
+			foreach (RSSVWorkOrderToAssign order in orders) { 
+				try {
+					// Change the assignee to the value selected on the form
+					order.Assignee = order.AssignTo;
+					graph.Clear();
+					graph.WorkOrders.Current = order;
+					graph.WorkOrders.Update(order);
+					graph.Actions.PressSave();
+
+					// Assign the work order.
+					graph.AssignOrder(order, true);
+				}
+				catch (Exception e) {
+					PXProcessing<RSSVWorkOrderToAssign>.SetError(orders.IndexOf(order), e);
+				}
 			}
 		}
 	}

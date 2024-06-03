@@ -58,6 +58,9 @@ namespace PhoneRepairShop {
 		//	Actions.PressSave();
 		//}
 
+		// The view for the calculation	of the number of assigned work orders per employee
+		public SelectFrom<RSSVEmployeeWorkOrderQty>.View Quantity;
+
 		public void AssignOrder(RSSVWorkOrder order, bool isMassProcess = false) {
 			WorkOrders.Current = order;
 
@@ -73,6 +76,12 @@ namespace PhoneRepairShop {
 
 			// Update the work order in the cache.
 			WorkOrders.Update(order);
+
+			// Modify the number of assigned orders for the employee.
+			RSSVEmployeeWorkOrderQty employeeNbrOfOrders = new RSSVEmployeeWorkOrderQty();
+			employeeNbrOfOrders.Userid = order.Assignee;
+			employeeNbrOfOrders.NbrOfAssignedOrders = 1;
+			Quantity.Insert(employeeNbrOfOrders);
 
 			// Trigger the Save action to save the changes to the database
 			Actions.PressSave();
@@ -96,6 +105,12 @@ namespace PhoneRepairShop {
 
 			// Update the data record in the cache.
 			WorkOrders.Update(row);
+
+			// Modify the number of assigned orders for the employee
+			RSSVEmployeeWorkOrderQty employeeNbrOfOrders = new RSSVEmployeeWorkOrderQty();
+			employeeNbrOfOrders.Userid = row.Assignee;
+			employeeNbrOfOrders.NbrOfAssignedOrders = -1;
+			Quantity.Insert(employeeNbrOfOrders);
 
 			// Trigger the Save action to save changes in the database.
 			Actions.PressSave();
@@ -131,6 +146,7 @@ namespace PhoneRepairShop {
 			LeftJoin<InventoryItem>.
 				On<InventoryItem.inventoryID.IsEqual<RSSVWorkOrderLabor.inventoryID.FromCurrent>>.
 			Where<RSSVWorkOrderLabor.orderNbr.IsEqual<RSSVWorkOrder.orderNbr.FromCurrent>>.View Labor;
+
 
 		// Copy repair items and labor items from the Services and Prices form.
 		protected virtual void _(Events.RowUpdated<RSSVWorkOrder> e) {
