@@ -24,7 +24,8 @@
         <Levels>
             <px:PXGridLevel DataMember="WorkOrders">
                 <RowTemplate>
-                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="Assignee" AutoRefresh="true" />
+                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="Assignee" AutoRefresh="true"></px:PXSegmentMask>
+                    <px:PXSegmentMask runat="server" ID="CstPXSegmentMask18" DataField="AssignTo" AutoRefresh="true"></px:PXSegmentMask>
                 </RowTemplate>
 
                 <Columns>
@@ -34,8 +35,11 @@
                     <px:PXGridColumn DataField="ServiceID" Width="140"></px:PXGridColumn>
                     <px:PXGridColumn DataField="DeviceID" Width="140"></px:PXGridColumn>
                     <px:PXGridColumn DataField="Priority" Width="70"></px:PXGridColumn>
-                    <px:PXGridColumn CommitChanges="True" DataField="Assignee" Width="140"></px:PXGridColumn>
-                    <px:PXGridColumn DataField="TimeWithoutAction" Width="70" />
+                    <px:PXGridColumn CommitChanges="False" DataField="Assignee" Width="140"></px:PXGridColumn>
+                    <px:PXGridColumn DataField="TimeWithoutAction" Width="70"></px:PXGridColumn>
+                    <px:PXGridColumn DataField="DefaultAssignee" Width="140" />
+                    <px:PXGridColumn CommitChanges="True" DataField="AssignTo" Width="140"></px:PXGridColumn>
+                    <px:PXGridColumn DataField="NbrOfAssignedOrders" Width="70" />
                 </Columns>
             </px:PXGridLevel>
         </Levels>
