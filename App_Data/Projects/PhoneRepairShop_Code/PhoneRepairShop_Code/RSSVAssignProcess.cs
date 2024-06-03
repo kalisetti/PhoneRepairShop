@@ -2,6 +2,7 @@ using System;
 using PX.Data;
 using PX.Data.BQL.Fluent;
 using System.Collections.Generic;
+using PX.Data.BQL;
 
 namespace PhoneRepairShop {
 	public class RSSVAssignProcess : PXGraph<RSSVAssignProcess> {
@@ -114,6 +115,20 @@ namespace PhoneRepairShop {
 					PXProcessing<RSSVWorkOrderToAssign>.SetError(orders.IndexOf(order), e);
 				}
 			}
+		}
+
+		protected virtual void _(Events.FieldSelecting<RSSVWorkOrderToAssign, RSSVWorkOrderToAssign.nbrOfAssignedOrders> e) {
+			if (e.Row == null) return;
+
+			RSSVWorkOrderToAssign order = e.Row;
+			RSSVEmployeeWorkOrderQty employeeNbrOfOrders =
+				SelectFrom<RSSVEmployeeWorkOrderQty>.
+				Where<RSSVEmployeeWorkOrderQty.userid.IsEqual<@P.AsGuid>>.View.Select(this, order.AssignTo);
+
+			if (employeeNbrOfOrders != null)
+				e.ReturnValue = employeeNbrOfOrders.NbrOfAssignedOrders;
+			else
+				e.ReturnValue = 0;
 		}
 	}
 }
