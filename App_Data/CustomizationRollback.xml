@@ -28,4 +28,5 @@
   <File path="Pages\RS\RS301000.aspx.cs" method="Delete" />
   <File path="Pages\RS\RS501000.aspx" method="Delete" />
   <File path="Pages\RS\RS501000.aspx.cs" method="Delete" />
+  <File path="ReportsCustomized\RS601000.rpx" method="Delete" />
 </Rollback>
