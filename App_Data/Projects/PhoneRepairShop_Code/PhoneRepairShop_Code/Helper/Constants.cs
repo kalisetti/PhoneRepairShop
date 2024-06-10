@@ -59,4 +59,10 @@ namespace PhoneRepairShop
 
 		}
 	}
+
+	public class workOrderStatusPaid : PX.Data.BQL.BqlString.Constant<workOrderStatusPaid> {
+		public workOrderStatusPaid() : base (WorkOrderStatusConstants.Paid) {
+
+		}
+	}
 }

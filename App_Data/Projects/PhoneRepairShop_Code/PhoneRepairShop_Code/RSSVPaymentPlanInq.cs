@@ -7,6 +7,13 @@ using PX.Objects.AR;
 namespace PhoneRepairShop {
 	public class RSSVPaymentPlanInq : PXGraph<RSSVPaymentPlanInq> {
 
+		#region Data Views
+		[PXFilterable]
+		public SelectFrom<RSSVWorkOrderToPay>.
+			InnerJoin<ARInvoice>.On<ARInvoice.refNbr.IsEqual<RSSVWorkOrderToPay.invoiceNbr>>.
+			Where<RSSVWorkOrderToPay.status.IsNotEqual<workOrderStatusPaid>>.View.ReadOnly DetailsView;
+		#endregion
+
 		#region Event Handlers
 		protected virtual void _(Events.FieldSelecting<RSSVWorkOrderToPay, RSSVWorkOrderToPay.percentPaid> e) {
 			if (e.Row == null) return;
@@ -26,18 +33,18 @@ namespace PhoneRepairShop {
 		//public PXCancel<MasterTable> Cancel;
 
 
-		public PXFilter<MasterTable> MasterView;
-		public PXFilter<DetailsTable> DetailsView;
+		//public PXFilter<MasterTable> MasterView;
+		//public PXFilter<DetailsTable> DetailsView;
 
-		[Serializable]
-		public class MasterTable : IBqlTable {
+		//[Serializable]
+		//public class MasterTable : IBqlTable {
 
-		}
+		//}
 
-		[Serializable]
-		public class DetailsTable : IBqlTable {
+		//[Serializable]
+		//public class DetailsTable : IBqlTable {
 
-		}
+		//}
 
 
 		
