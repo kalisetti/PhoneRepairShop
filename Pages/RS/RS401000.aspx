@@ -5,18 +5,20 @@
 <asp:Content ID="cont1" ContentPlaceHolderID="phDS" runat="Server">
     <px:PXDataSource ID="ds" runat="server" Visible="True" Width="100%"
         TypeName="PhoneRepairShop.RSSVPaymentPlanInq"
-        PrimaryView="DetailsView">
+        PrimaryView="Filter">
         <CallbackCommands>
         </CallbackCommands>
     </px:PXDataSource>
 </asp:Content>
-<%--<asp:Content ID="cont2" ContentPlaceHolderID="phF" Runat="Server">
-	<px:PXFormView ID="form" runat="server" DataSourceID="ds" DataMember="MasterView" Width="100%" Height="100px" AllowAutoHide="false">
-		<Template>
-			<px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True"/>
-		</Template>
-	</px:PXFormView>
-</asp:Content>--%>
+<asp:Content ID="cont2" ContentPlaceHolderID="phF" runat="Server">
+    <px:PXFormView ID="form" runat="server" DataSourceID="ds" DataMember="Filter" Width="100%" Height="100px" AllowAutoHide="false">
+        <Template>
+            <px:PXLayoutRule LabelsWidth="XM" ID="PXLayoutRule1" runat="server" StartColumn="True" />
+            <px:PXSegmentMask CommitChanges="True" runat="server" ID="CstPXSegmentMask1" DataField="CustomerID"/>
+            <px:PXSelector CommitChanges="True" runat="server" ID="CstPXSelector2" DataField="ServiceID" />
+        </Template>
+    </px:PXFormView>
+</asp:Content>
 <asp:Content ID="cont3" ContentPlaceHolderID="phG" runat="Server">
     <px:PXGrid ID="grid" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false">
         <Levels>
