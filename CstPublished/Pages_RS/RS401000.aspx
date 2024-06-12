@@ -5,6 +5,7 @@
 <asp:Content ID="cont1" ContentPlaceHolderID="phDS" runat="Server">
     <px:PXDataSource ID="ds" runat="server" Visible="True" Width="100%"
         TypeName="PhoneRepairShop.RSSVPaymentPlanInq"
+        PageLoadBehavior="PopulateSavedValues"
         PrimaryView="Filter">
         <CallbackCommands>
         </CallbackCommands>
