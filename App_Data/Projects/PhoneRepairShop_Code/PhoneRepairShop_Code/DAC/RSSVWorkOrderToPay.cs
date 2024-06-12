@@ -25,7 +25,12 @@ namespace PhoneRepairShop
 		public abstract class percentPaid: PX.Data.BQL.BqlDecimal.Field<percentPaid> { }
 		#endregion
 
-		
+		#region ServiceID
+		public new abstract class serviceID : PX.Data.BQL.BqlInt.Field<serviceID> { }
+		#endregion
 
+		#region CustomerID
+		public new abstract class customerID : PX.Data.BQL.BqlInt.Field<customerID> { }
+		#endregion
 	}
 }

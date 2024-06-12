@@ -28,6 +28,9 @@
                     <px:PXGridColumn DataField="PercentPaid" Width="72" />
                     <px:PXGridColumn DataField="ARInvoice__DueDate" Width="72" />
                     <px:PXGridColumn DataField="ARInvoice__CuryDocBal" Width="100" />
+
+                    <px:PXGridColumn DataField="ServiceID" Width="72" />
+                    <px:PXGridColumn DataField="CustomerID" Width="72" />
                 </Columns>
             </px:PXGridLevel>
         </Levels>

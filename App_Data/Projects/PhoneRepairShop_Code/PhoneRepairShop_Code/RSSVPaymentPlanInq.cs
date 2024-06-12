@@ -29,25 +29,29 @@ namespace PhoneRepairShop {
 		}
 		#endregion
 
-		//public PXSave<MasterTable> Save;
-		//public PXCancel<MasterTable> Cancel;
+		#region Data Access Classes
+		[PXHidden]
+		public class RSSVWorkOrderToPayFilter : IBqlTable {
+			#region ServiceID
+			[PXInt]
+			[PXUIField(DisplayName = "Service")]
+			[PXSelector(
+				typeof(Search<RSSVRepairService.serviceID>),
+				typeof(RSSVRepairService.serviceCD),
+				typeof(RSSVRepairService.description),
+				DescriptionField = typeof(RSSVRepairService.description),
+				SelectorMode = PXSelectorMode.DisplayModeText
+			)]
+			public virtual int? ServiceID { get; set; }
+			public abstract class serviceID : PX.Data.BQL.BqlInt.Field<serviceID> { }
+			#endregion
 
-
-		//public PXFilter<MasterTable> MasterView;
-		//public PXFilter<DetailsTable> DetailsView;
-
-		//[Serializable]
-		//public class MasterTable : IBqlTable {
-
-		//}
-
-		//[Serializable]
-		//public class DetailsTable : IBqlTable {
-
-		//}
-
-
-		
-
+			#region CustomerID
+			[CustomerActive(DisplayName = "Customer ID", Required = true)]
+			public virtual int? CustomerID { get; set; }
+			public abstract class customerID : PX.Data.BQL.BqlInt.Field<customerID> { }
+			#endregion
+		}
+		#endregion
 	}
 }
