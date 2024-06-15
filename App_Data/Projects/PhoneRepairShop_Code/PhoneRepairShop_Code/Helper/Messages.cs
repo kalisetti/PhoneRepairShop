@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PX.Common;
+using PX.Data;
 
 namespace PhoneRepairShop
 {
 	[PXLocalizable()]
 	public static class Messages
 	{
+		// Order Types
+		public const string SalesOrder = "SO";
+		public const string WorkOrder = "WO";
+
 		public const string ReportRS601000Title = "Assigned Work Orders";
 
 		// Exceeding Maximum Number Of Assigned Work Orders

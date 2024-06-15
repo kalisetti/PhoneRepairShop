@@ -25,6 +25,24 @@ namespace PhoneRepairShop
 		public abstract class percentPaid: PX.Data.BQL.BqlDecimal.Field<percentPaid> { }
 		#endregion
 
+		#region OrderType
+		[PXString]
+		[PXUIField(DisplayName = "Order Type")]
+		[PXUnboundDefault(OrderTypeConstants.WorkOrder)]
+		[PXStringList(
+			new string[] {
+				OrderTypeConstants.WorkOrder,
+				OrderTypeConstants.SalesOrder
+			},
+			new string[] {
+				Messages.WorkOrder,
+				Messages.SalesOrder,
+			}
+		)]
+		public virtual String OrderType { get; set; }
+		public abstract class orderType : PX.Data.BQL.BqlString.Field<orderType> { }
+		#endregion
+
 		#region ServiceID
 		public new abstract class serviceID : PX.Data.BQL.BqlInt.Field<serviceID> { }
 		#endregion
