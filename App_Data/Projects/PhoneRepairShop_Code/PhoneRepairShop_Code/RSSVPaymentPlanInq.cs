@@ -120,7 +120,14 @@ namespace PhoneRepairShop {
 			public virtual int? CustomerID { get; set; }
 			public abstract class customerID : PX.Data.BQL.BqlInt.Field<customerID> { }
 			#endregion
+
+			#region GroupByStatus
+			[PXBool]
+			[PXUIField(DisplayName = "Show Total Amount to Pay")]
+			public bool? GroupByStatus { get; set; }
+			public abstract class groupByStatus : PX.Data.BQL.BqlBool.Field<groupByStatus> { }
+			#endregion
 		}
-		#endregion
-	}
+        #endregion
+    }
 }

@@ -17,6 +17,7 @@
             <px:PXLayoutRule LabelsWidth="XM" ID="PXLayoutRule1" runat="server" StartColumn="True" />
             <px:PXSegmentMask CommitChanges="True" runat="server" ID="CstPXSegmentMask1" DataField="CustomerID"/>
             <px:PXSelector CommitChanges="True" runat="server" ID="CstPXSelector2" DataField="ServiceID" />
+            <px:PXCheckBox CommitChanges="true" runat="server" ID="CstPXCheckBoxGroupByStatus" DataField="GroupByStatus" />
         </Template>
     </px:PXFormView>
 </asp:Content>
