@@ -3,9 +3,6 @@
   "WorkspaceRootPath": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\pages\\rs\\rs401000.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\rssvpaymentplaninq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvpaymentplaninq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -14,7 +11,14 @@
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvworkordertopay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|c:\\acumatica erp\\phonerepairshop\\app_data\\projects\\phonerepairshop_code\\phonerepairshop_code\\dac\\rssvworkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC13EE32-76E7-4DD7-97EE-14C4904F18DB}|C:\\Acumatica ERP\\PhoneRepairShop|c:\\acumatica erp\\phonerepairshop\\pages\\rs\\rs401000.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\dac\\rssvworkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\dac\\rssvworkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,10 +31,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\helper\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\helper\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|solutionrelative:phonerepairshop_code\\rssvassignprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}|PhoneRepairShop_Code\\PhoneRepairShop_Code.csproj|C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\phonerepairshop_code\\rssvworkorderentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,11 +48,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SOOrderShipment.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\CodeRepository\\PX.Objects\\SO\\DAC\\SOOrderShipment.cs",
               "RelativeDocumentMoniker": "..\\..\\CodeRepository\\PX.Objects\\SO\\DAC\\SOOrderShipment.cs",
@@ -64,33 +64,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RSSVPaymentPlanInq.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVPaymentPlanInq.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\RSSVPaymentPlanInq.cs",
               "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVPaymentPlanInq.cs",
               "RelativeToolTip": "PhoneRepairShop_Code\\RSSVPaymentPlanInq.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAIwIIAAAASAAAA",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowDAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T06:25:27.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RSSVWorkOrderToPay.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\RSSVWorkOrderToPay.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrderToPay.cs",
               "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\RSSVWorkOrderToPay.cs",
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrderToPay.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABOAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T06:58:41.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Constants.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Constants.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\Helper\\Constants.cs",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RS401000.aspx",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\Pages\\RS\\RS401000.aspx",
               "RelativeDocumentMoniker": "..\\..\\..\\Pages\\RS\\RS401000.aspx",
@@ -127,19 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "RSSVAssignProcess.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVAssignProcess.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\RSSVAssignProcess.cs",
               "ToolTip": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\RSSVAssignProcess.cs",
               "RelativeToolTip": "PhoneRepairShop_Code\\RSSVAssignProcess.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowEcAAABbAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwDsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T05:39:55.518Z"
+              "WhenOpened": "2024-05-29T05:39:55.518Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RSSVWorkOrder.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
@@ -147,8 +148,7 @@
               "RelativeToolTip": "PhoneRepairShop_Code\\DAC\\RSSVWorkOrder.cs",
               "ViewState": "AQIAANYAAAAAAAAAAAAmwOUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T07:11:35.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T07:11:35.611Z"
             },
             {
               "$type": "Document",
@@ -164,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Messages.cs",
               "DocumentMoniker": "C:\\Acumatica ERP\\PhoneRepairShop\\App_Data\\Projects\\PhoneRepairShop_Code\\PhoneRepairShop_Code\\Helper\\Messages.cs",
               "RelativeDocumentMoniker": "PhoneRepairShop_Code\\Helper\\Messages.cs",

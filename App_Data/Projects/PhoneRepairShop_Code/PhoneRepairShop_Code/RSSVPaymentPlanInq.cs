@@ -47,6 +47,7 @@ namespace PhoneRepairShop {
 			return ret;
 		}
 
+		// Data view delegate to query data dynamically from multiple sources
 		protected virtual IEnumerable detailsView() {
 			foreach(PXResult<RSSVWorkOrderToPay, ARInvoice> order in 
 							SelectFrom<RSSVWorkOrderToPay>.
