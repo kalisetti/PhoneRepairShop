@@ -49,8 +49,10 @@ namespace PhoneRepairShop {
 
 		// Data view delegate to query data dynamically from multiple sources
 		protected virtual IEnumerable detailsView() {
-			foreach(PXResult<RSSVWorkOrderToPay, ARInvoice> order in 
-							SelectFrom<RSSVWorkOrderToPay>.
+			BqlCommand query;
+			var filter = Filter.Current;
+			if (filter.GroupByStatus != true) {
+				query = new SelectFrom<RSSVWorkOrderToPay>.
 								InnerJoin<ARInvoice>.
 									On<ARInvoice.refNbr.IsEqual<RSSVWorkOrderToPay.invoiceNbr>>.
 							Where<RSSVWorkOrderToPay.status.IsNotEqual<workOrderStatusPaid>.
@@ -60,10 +62,42 @@ namespace PhoneRepairShop {
 								And<RSSVWorkOrderToPayFilter.serviceID.FromCurrent.IsNull.
 									Or<RSSVWorkOrderToPay.serviceID.IsEqual<RSSVWorkOrderToPayFilter.serviceID.FromCurrent>>
 								>
-							>.View.Select(this)
-			) {
+							>();
+			} else {
+				query = new SelectFrom<RSSVWorkOrderToPay>.
+								InnerJoin<ARInvoice>.
+									On<ARInvoice.refNbr.IsEqual<RSSVWorkOrderToPay.invoiceNbr>>.
+							Where<RSSVWorkOrderToPay.status.IsNotEqual<workOrderStatusPaid>.
+								And<RSSVWorkOrderToPayFilter.customerID.FromCurrent.IsNull.
+									Or<RSSVWorkOrderToPay.customerID.IsEqual<RSSVWorkOrderToPayFilter.customerID.FromCurrent>>
+								>.
+								And<RSSVWorkOrderToPayFilter.serviceID.FromCurrent.IsNull.
+									Or<RSSVWorkOrderToPay.serviceID.IsEqual<RSSVWorkOrderToPayFilter.serviceID.FromCurrent>>
+								>
+							>.
+							AggregateTo<GroupBy<RSSVWorkOrderToPay.status>, Sum<ARInvoice.curyDocBal>>();
+			}
+
+			var view = new PXView(this, true, query);
+			foreach (PXResult<RSSVWorkOrderToPay, ARInvoice> order in view.SelectMulti(null)) {
 				yield return order;
 			}
+
+			//foreach (PXResult<RSSVWorkOrderToPay, ARInvoice> order in
+			//				SelectFrom<RSSVWorkOrderToPay>.
+			//					InnerJoin<ARInvoice>.
+			//						On<ARInvoice.refNbr.IsEqual<RSSVWorkOrderToPay.invoiceNbr>>.
+			//				Where<RSSVWorkOrderToPay.status.IsNotEqual<workOrderStatusPaid>.
+			//					And<RSSVWorkOrderToPayFilter.customerID.FromCurrent.IsNull.
+			//						Or<RSSVWorkOrderToPay.customerID.IsEqual<RSSVWorkOrderToPayFilter.customerID.FromCurrent>>
+			//					>.
+			//					And<RSSVWorkOrderToPayFilter.serviceID.FromCurrent.IsNull.
+			//						Or<RSSVWorkOrderToPay.serviceID.IsEqual<RSSVWorkOrderToPayFilter.serviceID.FromCurrent>>
+			//					>
+			//				>.View.Select(this)
+			//) {
+			//	yield return order;
+			//}
 
 			var sorders = SelectFrom<SOOrderShipment>.
 				InnerJoin<ARInvoice>.
