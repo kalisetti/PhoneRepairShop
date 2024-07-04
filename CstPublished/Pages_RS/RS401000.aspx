@@ -28,7 +28,7 @@
                 <Columns>
                     <px:PXGridColumn DataField="OrderNbr" Width="72" />
                     <px:PXGridColumn DataField="Status" Width="140" />
-                    <px:PXGridColumn DataField="InvoiceNbr" Width="72" />
+                    <px:PXGridColumn DataField="InvoiceNbr" Width="72" CommitChanges="true" />
                     <px:PXGridColumn DataField="PercentPaid" Width="72" />
                     <px:PXGridColumn DataField="ARInvoice__DueDate" Width="72" />
                     <px:PXGridColumn DataField="ARInvoice__CuryDocBal" Width="100" />
@@ -38,6 +38,9 @@
                     <px:PXGridColumn DataField="ServiceID" Width="100" />
                     <px:PXGridColumn DataField="CustomerID" Width="85" />
                 </Columns>
+                <RowTemplate>
+                    <px:PXSelector ID="edInvoiceNbr" runat="server" DataField="InvoiceNbr" Enabled="false" AllowEdit="true" />
+                </RowTemplate>
             </px:PXGridLevel>
         </Levels>
         <AutoSize Container="Window" Enabled="True" MinHeight="150" />
