@@ -39,5 +39,12 @@ namespace PhoneRepairShop {
 		public virtual string AdjgRefNbr { get; set; }
 		public abstract class adjgRefNbr : PX.Data.BQL.BqlString.Field<adjgRefNbr> { }
 		#endregion
+
+		#region CuryAdjdAmt
+		[PXDBDecimal(BqlField = typeof(ARAdjust.curyAdjdAmt))]
+		[PXUIField(DisplayName = "Latest Amount Paid", Enabled = false)]
+		public virtual Decimal? CuryAdjdAmt { get; set; }
+		public abstract class curyAdjdAmt : PX.Data.BQL.BqlDecimal.Field<curyAdjdAmt> { }
+		#endregion
 	}
 }

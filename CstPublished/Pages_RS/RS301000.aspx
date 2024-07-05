@@ -45,16 +45,16 @@
                         <Levels>
                             <px:PXGridLevel DataMember="RepairItems">
                                 <RowTemplate>
-                                    <px:pxLayoutRule ID="PXLayoutRule20" runat="server" StartRow="True" />
+                                    <px:pxLayoutRule ID="PXLayoutRule20" runat="server" StartRow="True" ></px:pxLayoutRule>
                                     <px:pxLayoutRule ID="PXLayoutRule25" runat="server" LabelsWidth="SM" ControlSize="M" 
-                                        GroupCaption="Repair Item" StartGroup="True"/>
-                                    <px:PXDropDown runat="server" ID="CstPXDropDown27" DataField="RepairItemType" />
+                                        GroupCaption="Repair Item" StartGroup="True"></px:pxLayoutRule>
+                                    <px:PXDropDown runat="server" ID="CstPXDropDown27" DataField="RepairItemType" ></px:PXDropDown>
                                     <px:PXSegmentMask runat="server" ID="CstPXSegmentMask8" DataField="InventoryID" AutoRefresh="true"></px:PXSegmentMask>
-                                    <px:PXTextEdit runat="server" ID="CstPXTextEdit26" DataField="InventoryID_description" />
+                                    <px:PXTextEdit runat="server" ID="CstPXTextEdit26" DataField="InventoryID_description" ></px:PXTextEdit>
 
                                     <px:PXLayoutRule runat="server" ID="CstPXLayoutRule30" LabelsWidth="S"
-                                        GroupCaption="Price info" StartColumn="True" />
-                                    <px:PXNumberEdit runat="server" ID="CstPXNumberEdit25" DataField="BasePrice" />
+                                        GroupCaption="Price info" StartColumn="True" ></px:PXLayoutRule>
+                                    <px:PXNumberEdit runat="server" ID="CstPXNumberEdit25" DataField="BasePrice" ></px:PXNumberEdit>
                                 </RowTemplate>
                                 <Columns>
                                     <px:PXGridColumn DataField="RepairItemType" CommitChanges="True" Width="70"></px:PXGridColumn>
@@ -69,7 +69,7 @@
                         <ActionBar>
                         </ActionBar>
 
-                        <Mode AllowFormEdit="True" />
+                        <Mode AllowFormEdit="True" ></Mode>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
@@ -79,21 +79,21 @@
                         <Levels>
                             <px:PXGridLevel DataMember="Labor">
                                 <Columns>
-                                    <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" />
-                                    <px:PXGridColumn DataField="InventoryID_description" Width="280" />
-                                    <px:PXGridColumn DataField="DefaultPrice" CommitChanges="True" Width="100" />
-                                    <px:PXGridColumn DataField="Quantity" CommitChanges="True" Width="100" />
-                                    <px:PXGridColumn DataField="ExtPrice" Width="100" />
+                                    <px:PXGridColumn DataField="InventoryID" CommitChanges="True" Width="70" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="InventoryID_description" Width="280" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DefaultPrice" CommitChanges="True" Width="100" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Quantity" CommitChanges="True" Width="100" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ExtPrice" Width="100" ></px:PXGridColumn>
 
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Container="Window" Enabled="True" MinHeight="150" />
+                        <AutoSize Container="Window" Enabled="True" MinHeight="150" ></AutoSize>
                         <ActionBar>
                             <CustomItems>
                                 <px:PXToolBarButton Text="Complete">
                                     <AutoCallBack Command="Complete" Target="ds">
-                                        <Behavior CommitChanges="True" />
+                                        <Behavior CommitChanges="True" ></Behavior>
                                     </AutoCallBack>
                                 </px:PXToolBarButton>
                             </CustomItems>
@@ -101,7 +101,14 @@
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
-        </Items>
-        <AutoSize Container="Window" Enabled="True" MinHeight="150" />
+	<px:PXTabItem Text="Payment Info" >
+		<Template>
+			<px:PXFormView DataMember="Payments" runat="server" ID="formPayments" >
+				<Template>
+					<px:PXTextEdit runat="server" ID="CstPXTextEdit32" DataField="InvoiceNbr" ></px:PXTextEdit>
+					<px:PXDateTimeEdit runat="server" ID="CstPXDateTimeEdit31" DataField="DueDate" ></px:PXDateTimeEdit>
+					<px:PXTextEdit runat="server" ID="CstPXTextEdit29" DataField="AdjgRefNbr" ></px:PXTextEdit>
+					<px:PXNumberEdit runat="server" ID="CstPXNumberEdit30" DataField="CuryAdjdAmt" ></px:PXNumberEdit></Template></px:PXFormView></Template></px:PXTabItem></Items>
+        <AutoSize Container="Window" Enabled="True" MinHeight="150" ></AutoSize>
     </px:PXTab>
 </asp:Content>
