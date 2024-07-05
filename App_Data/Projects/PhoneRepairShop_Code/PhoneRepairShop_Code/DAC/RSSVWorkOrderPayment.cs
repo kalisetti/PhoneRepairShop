@@ -20,7 +20,7 @@ namespace PhoneRepairShop {
 	)]
 	public class RSSVWorkOrderPayment : IBqlTable{
 		#region InvociceNbr
-		[PXDBString(15, IsUnicode = true, IsKey = true, InputMask = "", BqlField = typeof(ARInvoice.refNbr)]
+		[PXDBString(15, IsUnicode = true, IsKey = true, InputMask = "", BqlField = typeof(ARInvoice.refNbr))]
 		[PXUIField(DisplayName = "Invoice Nbr.", Enabled = false)]
 		public virtual String InvoiceNbr { get; set; }
 		public abstract class invoiceNbr : PX.Data.BQL.BqlString.Field<invoiceNbr> { }

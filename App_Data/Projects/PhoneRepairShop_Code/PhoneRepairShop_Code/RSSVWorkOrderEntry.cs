@@ -131,6 +131,7 @@ namespace PhoneRepairShop {
 		}
 		#endregion
 
+		#region Data Views
 		// Views
 		// The primary view
 		public SelectFrom<RSSVWorkOrder>.View WorkOrders;
@@ -147,6 +148,10 @@ namespace PhoneRepairShop {
 				On<InventoryItem.inventoryID.IsEqual<RSSVWorkOrderLabor.inventoryID.FromCurrent>>.
 			Where<RSSVWorkOrderLabor.orderNbr.IsEqual<RSSVWorkOrder.orderNbr.FromCurrent>>.View Labor;
 
+		// The view for the Payment Info tab
+		public SelectFrom<RSSVWorkOrderPayment>.
+			Where<RSSVWorkOrderPayment.invoiceNbr.IsEqual<RSSVWorkOrder.invoiceNbr.FromCurrent>>.View Payments;
+		#endregion
 
 		// Copy repair items and labor items from the Services and Prices form.
 		protected virtual void _(Events.RowUpdated<RSSVWorkOrder> e) {
