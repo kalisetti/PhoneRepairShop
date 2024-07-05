@@ -63,7 +63,8 @@ namespace PhoneRepairShop {
 									Or<RSSVWorkOrderToPay.serviceID.IsEqual<RSSVWorkOrderToPayFilter.serviceID.FromCurrent>>
 								>
 							>();
-			} else {
+			}
+			else {
 				query = new SelectFrom<RSSVWorkOrderToPay>.
 								InnerJoin<ARInvoice>.
 									On<ARInvoice.refNbr.IsEqual<RSSVWorkOrderToPay.invoiceNbr>>.
@@ -118,6 +119,46 @@ namespace PhoneRepairShop {
 			}
 		}
 
+		#region Actions
+		// T250 - Step 1.5.2: Add a Link by Using an Action
+		// This will allow us to open SO & WO respectively when clicked on orderNbr
+		public PXAction<RSSVWorkOrderToPay> ViewOrder;
+		[PXButton]
+		[PXUIField]
+		protected virtual void viewOrder() {
+			RSSVWorkOrderToPay order = DetailsView.Current;
+
+			// if this is a repair work order
+			if (order.OrderType == OrderTypeConstants.WorkOrder) {
+				// create a new instance of the graph
+				var graph = PXGraph.CreateInstance<RSSVWorkOrderEntry>();
+
+				// set the current property of the graph
+				graph.WorkOrders.Current = graph.WorkOrders.Search<RSSVWorkOrder.orderNbr>(order.OrderNbr);
+
+				// if the order is found by its ID,
+				// throw an exception to open the order in a new tab
+				if (graph.WorkOrders.Current != null) {
+					throw new PXRedirectRequiredException(graph, true, "Repair Work Order Details");
+				}
+			}
+			// if this is a sales order
+			else {
+				// create a new instance of the graph
+				var graph = PXGraph.CreateInstance<SOOrderEntry>();
+
+				// set the current property of the graph
+				graph.Document.Current = graph.Document.Search<RSSVWorkOrder.orderNbr>(order.OrderNbr);
+
+				// if the order is found by its ID,
+				// throw an exception to open the order in a new tab
+				if (graph.Document.Current != null) {
+					throw new PXRedirectRequiredException(graph, true, "Sales Order Details");
+				}
+			}
+		}
+		#endregion
+
 		#region Event Handlers
 		protected virtual void _(Events.FieldSelecting<RSSVWorkOrderToPay, RSSVWorkOrderToPay.percentPaid> e) {
 			if (e.Row == null) return;
@@ -163,6 +204,6 @@ namespace PhoneRepairShop {
 			public abstract class groupByStatus : PX.Data.BQL.BqlBool.Field<groupByStatus> { }
 			#endregion
 		}
-        #endregion
-    }
+		#endregion
+	}
 }

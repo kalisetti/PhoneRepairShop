@@ -8,6 +8,7 @@
         PageLoadBehavior="PopulateSavedValues"
         PrimaryView="Filter">
         <CallbackCommands>
+            <px:PXDSCallbackCommand Visible="false" CommitChanges="true" Name="ViewOrder" DependOnGrid="grid"></px:PXDSCallbackCommand>
         </CallbackCommands>
     </px:PXDataSource>
 </asp:Content>
@@ -26,7 +27,7 @@
         <Levels>
             <px:PXGridLevel DataMember="DetailsView">
                 <Columns>
-                    <px:PXGridColumn DataField="OrderNbr" Width="72" />
+                    <px:PXGridColumn DataField="OrderNbr" Width="72" LinkCommand="ViewOrder" />
                     <px:PXGridColumn DataField="Status" Width="140" />
                     <px:PXGridColumn DataField="InvoiceNbr" Width="72" CommitChanges="true" />
                     <px:PXGridColumn DataField="PercentPaid" Width="72" />

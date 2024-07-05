@@ -1,74 +1,74 @@
 <content>
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS202000.aspx.cs" hash="638546295189563950|638546295189563950" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS202000.aspx" hash="638546295189393785|638546295189393785" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS201000.aspx.cs" hash="638546295189141735|638554217627410736" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\ReportsCustomized\RS601000.rpx" hash="638556819305833876|638556819305833876" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS501000.aspx.cs" hash="638556819305623927|638556819305623927" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS501000.aspx" hash="638556819305363865|638556819305373907" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS201000.aspx" hash="638554208273909812|638554208273909812" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS201000.aspx.cs" hash="638554208273909812|638554208273919829" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS201000.aspx" hash="638554208296100134|638554208296100134" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS201000.aspx.cs" hash="638554208296110129|638554208296110129" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS201000.aspx" hash="638546295188971323|638554217627100723" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS401000.aspx.cs" hash="638556819305193910|638556819305193910" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstDesigner\admin_PhoneRepairShop\RS201000.aspx" hash="638511648638241150|638511648638241150" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstDesigner\admin_PhoneRepairShop\RS201000.aspx.cs" hash="638511648638397654|638511648638397654" />
-  <file path="C:\Acumatica ERP\PhoneRepairShop\Bin\PhoneRepairShop_Code.dll" hash="638554208266592588|638555905075814800" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Bin\PhoneRepairShop_Code.dll" hash="638546295188547542|638555906370804287" />
+  <file path="C:\Acumatica ERP\PhoneRepairShop\Bin\PhoneRepairShop_Code.dll" hash="638554208266592588|638556812828700967" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS401000.aspx" hash="638556819304962271|638556825540011743" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS202000.aspx" hash="638554208296120139|638554208296120139" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS202000.aspx.cs" hash="638554208296120139|638554208296120139" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_rs\rs202000.aspx.cs" hash="638546295187526650|638556770138309566" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_rs\rs202000.aspx" hash="638546295187376629|638546295187376629" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS201000.aspx.cs" hash="638546295187283959|638546296609986082" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS201000.aspx" hash="638546295187173942|638546296609693435" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS301000.aspx.cs" hash="638556819304782181|638556819304792186" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS301000.aspx" hash="638556819304558966|638556819304558966" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS203000.aspx.cs" hash="638556819304377755|638556819304377755" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS203000.aspx" hash="638556819304184856|638556819304184856" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_rs\rs202000.aspx" hash="638554208273959825|638554208273969822" />
-  <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_rs\rs202000.aspx.cs" hash="638554208273969822|638556770820640688" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_in\in202500.aspx" hash="638546295186758559|638546296608680445" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_in\in202500.aspx.cs" hash="638546295186891624|638546295186891624" />
+  <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_rs\rs202000.aspx.cs" hash="638554208273969822|638556825780702124" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS202000.aspx.cs" hash="638556819303992387|638556819303992387" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS202000.aspx" hash="638556819303732419|638556819303732419" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_in\in202500.aspx" hash="638554208273999813|638554208274009800" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_in\in202500.aspx.cs" hash="638554208274009800|638554208274009800" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS203000.aspx" hash="638546295187638344|638546295187638344" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS203000.aspx.cs" hash="638546295187758376|638546296610446030" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS203000.aspx" hash="638546295189653765|638546295189653765" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS203000.aspx.cs" hash="638546295189783106|638554217627646747" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS201000.aspx.cs" hash="638556819303548702|638556819303568662" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS201000.aspx" hash="638556819303317431|638556819303317431" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS101000.aspx.cs" hash="638556819303132741|638556819303132741" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS101000.aspx" hash="638556819302907495|638556819302907495" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS203000.aspx" hash="638554208273919829|638554208273919829" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS203000.aspx.cs" hash="638554208273929808|638554208273929808" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS203000.aspx" hash="638554208296130256|638554208296130256" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS203000.aspx.cs" hash="638554208296140335|638554208296140335" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS301000.aspx" hash="638546295187840501|638546295187840501" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS301000.aspx.cs" hash="638546295187983194|638546296610696050" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Bin\PhoneRepairShop_Code.dll" hash="638556819302544372|638556819302544372" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS501000.aspx.cs" hash="638556819302350749|638556819302350749" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstDesigner\admin_PhoneRepairShop\RS301000.aspx.cs" hash="638517271727648922|638517271727648922" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS301000.aspx" hash="638546295189876619|638546295189876619" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS301000.aspx.cs" hash="638546295190029432|638554217628000533" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS501000.aspx" hash="638556819302111342|638556819302121347" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS401000.aspx.cs" hash="638556819301926311|638556819301926311" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS301000.aspx" hash="638554208273929808|638554208273929808" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS301000.aspx.cs" hash="638554208273939804|638554208273939804" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstDesigner\admin_PhoneRepairShop\RS301000.aspx" hash="638517271727509291|638517271727519269" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS301000.aspx" hash="638554208296140335|638554208296150224" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS301000.aspx.cs" hash="638554208296150224|638554208296150224" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS101000.aspx" hash="638546295186993951|638546296609043428" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS101000.aspx.cs" hash="638546295187093947|638546296609353435" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS101000.aspx" hash="638546295188757245|638554217626526036" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS101000.aspx.cs" hash="638546295188881401|638554217626821419" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS401000.aspx" hash="638556819301695959|638556825539600968" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS301000.aspx.cs" hash="638556819301540805|638556819301540805" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS301000.aspx" hash="638556819301327271|638556819301337276" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS203000.aspx.cs" hash="638556819301156655|638556819301166620" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS101000.aspx" hash="638554208273889832|638554208273899832" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS101000.aspx.cs" hash="638554208273899832|638554208273899832" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS101000.aspx" hash="638554208296080137|638554208296080137" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS101000.aspx.cs" hash="638554208296090245|638554208296090245" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_ar\ar302000.aspx" hash="638546295186445005|638546296608330444" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_ar\ar302000.aspx.cs" hash="638546295186678606|638546295186678606" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_ar\ar302000.aspx" hash="638556819298444514|638556819298454515" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS203000.aspx" hash="638556819300976201|638556819300991245" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_ar\ar302000.aspx" hash="638554208273989822|638554208273989822" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\pages_ar\ar302000.aspx.cs" hash="638554208273989822|638554208273999813" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS501000.aspx" hash="638546295188294879|638546295188304875" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS501000.aspx.cs" hash="638546295188444987|638546296611398225" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS501000.aspx" hash="638546295190356242|638546295190356242" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS501000.aspx.cs" hash="638546295190492991|638554217629532269" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_rs\rs202000.aspx.cs" hash="638556819300827694|638556825543435893" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_rs\rs202000.aspx" hash="638556819300496596|638556819300496596" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS201000.aspx.cs" hash="638556819300301165|638556819300321043" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS201000.aspx" hash="638556819300075450|638556819300075450" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS501000.aspx" hash="638554208273949818|638554208273959825" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS501000.aspx.cs" hash="638554208273959825|638554208273959825" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS501000.aspx" hash="638554208296170223|638554208296170223" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS501000.aspx.cs" hash="638554208296180224|638554208296180224" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\ReportsCustomized\RS601000.rpx" hash="638554208300090421|638554208300100461" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\ReportsCustomized\RS601000.rpx" hash="638546295190622080|638554217630288030" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS401000.aspx" hash="638546295188073387|638556770135168054" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS401000.aspx.cs" hash="638546295188214967|638546296611068200" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS401000.aspx" hash="638546295190136332|638556770135538234" />
-  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\Pages\RS\RS401000.aspx.cs" hash="638546295190266250|638554217628389696" />
-  <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS401000.aspx" hash="638554208273939804|638556770820795749" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS101000.aspx.cs" hash="638556819299901763|638556819299901763" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\Pages_RS\RS101000.aspx" hash="638556819299681280|638556819299681280" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_in\in202500.aspx.cs" hash="638556819299259652|638556819299259652" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_in\in202500.aspx" hash="638556819299049638|638556819299059651" />
+  <file path="C:\Acumatica ERP\Customization\PhoneRepairShop\PhoneRepairShopValidation\PhoneRepairShopWebsite\CstPublished\pages_ar\ar302000.aspx.cs" hash="638556819298864508|638556819298864508" />
+  <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS401000.aspx" hash="638554208273939804|638556825780897357" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\CstPublished\Pages_RS\RS401000.aspx.cs" hash="638554208273949818|638554208273949818" />
-  <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS401000.aspx" hash="638554208296150224|638556769764546240" />
+  <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS401000.aspx" hash="638554208296150224|638556825226543018" />
   <file path="C:\Acumatica ERP\PhoneRepairShop\Pages\RS\RS401000.aspx.cs" hash="638554208296160224|638554208296160224" />
 </content>
