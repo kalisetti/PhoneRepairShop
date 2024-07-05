@@ -333,6 +333,7 @@ namespace PhoneRepairShop {
 			}
 		}
 
+		//Enable the Assign action when the Status is ReadyForAssignment
 		protected virtual void _(Events.RowSelected<RSSVWorkOrder> e) {
 			RSSVWorkOrder row = e.Row;
 			if (row == null) return;
@@ -344,6 +345,8 @@ namespace PhoneRepairShop {
 			CreateInvoiceAction.SetVisible(WorkOrders.Current.Status == WorkOrderStatusConstants.Completed ||
 				WorkOrders.Current.Status == WorkOrderStatusConstants.PendingPayment);
 			CreateInvoiceAction.SetEnabled(WorkOrders.Current.InvoiceNbr == null);
+
+			Payments.Cache.AllowSelect = row.Status == WorkOrderStatusConstants.Paid;
 		}
 
 		private static void CreateInvoice(RSSVWorkOrderEntry woEntry) {
